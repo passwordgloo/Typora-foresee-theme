@@ -16,9 +16,13 @@
 
 ## 预览
 
-![](./source/img/Typora_4ypLiBtCav.gif)
+### 浅色模式
 
-![](./source/img/Typora_8WX7OnCe1V.gif)
+![](source/img/kRk07KGs7k.png)
+
+### 深色模式
+
+![](source/img/vBhqaHoHSb.png)
 
 ## 项目用途
 

@@ -1,25 +1,4 @@
-@media only screen and (min-width: 1400px) {
-    #write {
-        max-width: 1024px;
-    }
-}
-
-@media only screen and (min-width: 1800px) {
-    #write {
-        max-width: 1200px;
-    }
-}
-
-@media (max-width: 1000px) {
-    footer {
-        border-top: none;
-    }
-
-    footer:hover {
-        color: inherit;
-    }
-}
-
+/* scrollbar style */
 ::-webkit-scrollbar-thumb {
     background: var(--theme-color);
 }
@@ -56,8 +35,10 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--article);
+    caret-color: var(--theme-color);
 }
 
+/* paeg width */
 #write {
     max-width: 914px;
 }
@@ -73,10 +54,9 @@ p {
     word-wrap: break-word;
 }
 
-p.md-focus>span.md-plain.md-expand 
-{
-	border-bottom:2px dashed var(--focus-color);
-	color: var(--focus);
+p.md-focus>span.md-plain.md-expand {
+    border-bottom: 2px dashed var(--focus-color);
+    color: var(--focus);
 }
 
 a {
@@ -108,14 +88,9 @@ h2 {
     font-size: 1.8em;
     font-weight: 1000;
     line-height: 1.2;
+    padding-left:.5em;
     font-family: var(--font-family);
-}
-
-h2::before {
-    content: "";
-    animation: all 0.3s ease;
-    margin-right: .5em;
-    border-left: 10px solid var(--theme-color);
+    border-left: 8px solid var(--theme-color);
 }
 
 #write>h2.md-focus {
@@ -128,6 +103,10 @@ h3 {
     line-height: 1.43;
     font-family: var(--font-family);
     border-bottom: 1px dashed var(--theme-color);
+}
+
+#write>h3.md-focus {
+    border-color: var(--focus-color);
 }
 
 h4 {
@@ -143,6 +122,12 @@ h5 {
     font-weight: 900;
 }
 
+#write>h5.md-focus:before {
+    width: auto;
+    height: auto;
+    background-color: var(--focus-color);
+    color: #ffffff;
+}
 p,
 blockquote,
 ul,
@@ -158,13 +143,8 @@ li>ul {
 }
 
 hr {
-    height: 2px;
-    padding: 0;
     margin: 16px 0;
-    background-color: var(--hr);
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
+    border-top:2px dashed var(--theme-color);
 }
 
 li p.first {
@@ -318,7 +298,7 @@ mark {
 }
 
 /* code and code block */
-code{
+code {
     padding: .3rem;
     margin-right: .4em;
     color: var(--theme-color);
@@ -339,11 +319,6 @@ kbd {
 pre.md-fences {
     padding: 10px 10px 10px 30px;
     margin-bottom: 20px;
-}
-
-.code-tooltip .ty-input,
-.code-tooltip input {
-    background-color: var(--theme-color);
 }
 
 #ty-tooltip {

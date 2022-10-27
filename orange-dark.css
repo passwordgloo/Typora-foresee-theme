@@ -10,8 +10,7 @@
     --sidebar: #3E3E3E;
     --text-color: #DEDEDE;
     --theme-color: #FF8C00;
-    --focus-color:#00CD66;
-    --hr: rgba(27, 27, 29, 0.2);
+    --focus-color: #00CD66;
     --bg-color: var(--article);
     --select-text-bg-color: #666;
     --primary-color: var(--theme-color);
@@ -20,4 +19,3 @@
     --control-text-hover-color: var(--theme-color);
     --font-family: "Microsoft YaHei", "Arial", "sans-serif";
 }
-

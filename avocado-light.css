@@ -9,8 +9,8 @@
     --article: #FFF;
     --sidebar: #F2F2F2;
     --text-color: #323232;
-    --theme-color: #FF8C00;
-    --focus-color: #00CD66;
+    --theme-color: #00CD66;
+    --focus-color: #FF00FF;
     --bg-color: var(--article);
     --primary-color: var(--theme-color);
     --rawblock-edit-panel-bd: var(--sidebar);

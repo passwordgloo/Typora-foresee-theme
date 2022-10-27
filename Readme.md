@@ -18,9 +18,15 @@ This idea is inspired by [typora-dyzj-theme](https://github.com/muggledy/typora-
 
 ## Preview
 
-![](./source/img/Typora_4ypLiBtCav.gif)
+### light mode
 
-![](./source/img/Typora_8WX7OnCe1V.gif)
+![](source/img/kRk07KGs7k.png)
+
+### Dark mode
+
+![](source/img/vBhqaHoHSb.png)
+
+
 
 ## Purpose of use
 
