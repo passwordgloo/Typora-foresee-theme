@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "source/foresee.css";
+@import "source/codedark.css";
+
+/* theme-color: #FF6347(tomato)  #FF00FF(violet) #00BFFF(sky) #00CD66(grass) #FF8C00(orange)*/
+
+:root {
+  --display: #FFFFFF;
+  --article: #323232;
+  --sidebar: #3E3E3E;
+  --text-color: #DEDEDE;
+  --theme-color: #FF6347;
+  --focus-color:#FF8C00;
+  --hr: rgba(27, 27, 29, 0.2);
+  --bg-color: var(--article);
+  --select-text-bg-color: #666;
+  --primary-color: var(--theme-color);
+  --rawblock-edit-panel-bd: var(--sidebar);
+  --item-hover-bg-color: var(--theme-color);
+  --control-text-hover-color: var(--theme-color);
+  --font-family: "Microsoft YaHei", "Arial", "sans-serif";
+}
