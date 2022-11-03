@@ -39,9 +39,9 @@ body {
 }
 
 /* paeg width */
-#write {
+/* #write {
     max-width: 914px;
-}
+} */
 
 /* -----------------article content---------------------- */
 h1,
@@ -67,7 +67,7 @@ h2 {
     font-size: 1.8em;
     font-weight: 1000;
     line-height: 1.2;
-    padding-left:.5em;
+    padding-left: .5em;
     font-family: var(--font-family);
     border-left: 8px solid var(--theme-color);
 }
@@ -130,26 +130,26 @@ a {
 }
 
 /* badge */
-span[alt="blue"]{
-    margin-left:.2em;
-    padding:0 .5em;
-    color:white;
+span[alt="blue"] {
+    margin-left: .2em;
+    padding: 0 .5em;
+    color: white;
     border-radius: 5%;
     background-image: linear-gradient(to right, #00E3AE 0%, #00c9ff 100%);
 }
 
-span[alt="orange"]{
-    margin-left:.2em;
-    padding:0 .5em;
-    color:white;
+span[alt="orange"] {
+    margin-left: .2em;
+    padding: 0 .5em;
+    color: white;
     border-radius: 5%;
     background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
 }
 
-span[alt="purple"]{
-    margin-left:.2em;
-    padding:0 .5em;
-    color:white;
+span[alt="purple"] {
+    margin-left: .2em;
+    padding: 0 .5em;
+    color: white;
     border-radius: 5%;
     background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
 }
@@ -170,7 +170,7 @@ li>ul {
 
 hr {
     margin: 16px 0;
-    border-top:2px dashed var(--theme-color);
+    border-top: 2px dashed var(--theme-color);
 }
 
 li p.first {
@@ -341,6 +341,17 @@ kbd {
     border: none;
     box-shadow: 0 0 3px 0 var(--theme-color);
     background-color: var(--article);
+}
+
+em {
+    font-style: normal;
+    border-bottom: 4px dotted var(--focus-color);
+}
+
+del {
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: var(--focus-color);
 }
 
 pre.md-fences {

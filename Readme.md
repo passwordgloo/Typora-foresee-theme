@@ -8,7 +8,7 @@
 
 ## Thanks
 
-This idea is inspired by [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme)
+Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme) 
 
 ## How to use
 
@@ -26,7 +26,28 @@ This idea is inspired by [typora-dyzj-theme](https://github.com/muggledy/typora-
 
 ![](source/img/vBhqaHoHSb.png)
 
+> if these images can't display normally,you can also  priview effects from [demo-light](demo-light.html) and [demo-dark](demo-dark.html) websites
 
+## Personalities
+
+Modify code in XXX-light(dark).css so that you c obtain special and personal style
+
+```css
+:root {
+    --display: #666;
+    --article: #FFF;			
+    --sidebar: #F2F2F2;
+    --text-color: #323232;
+    --theme-color: #FF8C00;
+    --focus-color: #00CD66;
+    --bg-color: var(--article);
+    --primary-color: var(--theme-color);
+    --rawblock-edit-panel-bd: var(--sidebar);
+    --item-hover-bg-color: var(--theme-color);
+    --control-text-hover-color: var(--theme-color);
+    --font-family: "Microsoft YaHei", "Arial", "sans-serif";
+}
+```
 
 ## Purpose of use
 

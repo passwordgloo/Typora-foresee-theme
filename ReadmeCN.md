@@ -6,7 +6,7 @@
 
 ## 感谢
 
-受 [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme) 启发
+选中样式受 [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme) 启发
 
 ## 如何使用
 
@@ -23,6 +23,29 @@
 ### 深色模式
 
 ![](source/img/vBhqaHoHSb.png)
+
+>如果这些图片无法正常显示，你可以从 [demo-light](demo.light.html) 和 [demo-dark](demo-dark.html) 网页预览效果
+
+## 个性化
+
+修改XXX-light(dark).css文件中代码以获得个性化体验
+
+```css
+:root {
+    --display: #666;
+    --article: #FFF;
+    --sidebar: #F2F2F2;
+    --text-color: #323232;
+    --theme-color: #FF8C00;
+    --focus-color: #00CD66;
+    --bg-color: var(--article);
+    --primary-color: var(--theme-color);
+    --rawblock-edit-panel-bd: var(--sidebar);
+    --item-hover-bg-color: var(--theme-color);
+    --control-text-hover-color: var(--theme-color);
+    --font-family: "Microsoft YaHei", "Arial", "sans-serif";
+}
+```
 
 ## 项目用途
 

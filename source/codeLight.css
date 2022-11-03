@@ -12,17 +12,17 @@
 
 .cm-s-inner .CodeMirror-cursor { border-left: 1px solid #5c5855; }
 
-.cm-s-inner span.cm-comment { color: #cdab53; }
+.cm-s-inner span.cm-comment { color: #629755 !important }
 .cm-s-inner span.cm-atom { color: #a16a94; }
 .cm-s-inner span.cm-number { color: #a16a94; }
 
-.cm-s-inner span.cm-property, .cm-s-inner span.cm-attribute { color: rgb(238, 130, 238); }
+.cm-s-inner span.cm-property, .cm-s-inner span.cm-attribute { color: rgb(237,9,237); }
 .cm-s-inner span.cm-keyword { color: #db2d20; }
 .cm-s-inner span.cm-string { color: #2f9c0a; }
 
 .cm-s-inner span.cm-variable { color: #1990b8; }
 .cm-s-inner span.cm-variable-2 { color: #01a0e4; }
-.cm-s-inner span.cm-def { color: #e8bbd0; }
+.cm-s-inner span.cm-def { color:#e06c75 !important }
 .cm-s-inner span.cm-bracket { color: #3a3432; }
 .cm-s-inner span.cm-tag { color: #db2d20; }
 .cm-s-inner span.cm-link { color: #a16a94; }
