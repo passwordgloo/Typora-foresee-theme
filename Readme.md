@@ -26,7 +26,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ![](source/img/vBhqaHoHSb.png)
 
-> if these images can't display normally,you can also  priview effects from [demo-light](demo-light.html) and [demo-dark](demo-dark.html) websites
+> if these images can't display normally,you can also  priview effects from [light](test/light.html) and [dark](test/dark.html) websites
 
 ## Personalities
 

@@ -24,7 +24,7 @@
 
 ![](source/img/vBhqaHoHSb.png)
 
->如果这些图片无法正常显示，你可以从 [demo-light](demo.light.html) 和 [demo-dark](demo-dark.html) 网页预览效果
+>如果这些图片无法正常显示，你可以从 [light](test/light.html) 和 [dark](test/dark.html) 网页预览效果
 
 ## 个性化
 

@@ -133,9 +133,9 @@ a {
 span[alt="blue"] {
     margin-left: .2em;
     padding: 0 .5em;
-    color: white;
+    color: #fff7c8;
     border-radius: 5%;
-    background-image: linear-gradient(to right, #00E3AE 0%, #00c9ff 100%);
+    background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
 }
 
 span[alt="orange"] {
