@@ -133,7 +133,7 @@ a {
 span[alt="blue"] {
     margin-left: .2em;
     padding: 0 .5em;
-    color: #fff7c8;
+    color: white;
     border-radius: 5%;
     background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
 }
@@ -292,7 +292,7 @@ table th {
 }
 
 mark {
-    background-color: yellow;
+    background-color: var(--focus-color);
     color: var(--sidebar);
 }
 
