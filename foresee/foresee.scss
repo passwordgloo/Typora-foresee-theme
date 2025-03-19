@@ -1,5 +1,5 @@
 /* 
-version:0.0.4.7
+version:0.0.5.2
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -64,13 +64,15 @@ tomato purple
 blue purple
 */
 
-$themeColor: $green;
+$themeColor: $blue;
 
-$focusColor: $blue;
+$focusColor: $purple;
 
-$themeGradient: $green-gradient;
+$lightFocusColor:lighten($focusColor,20%);
 
-$focusGradient: $blue-gradient;
+$themeGradient: $blue-gradient;
+
+$focusGradient: $purple-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -122,7 +124,8 @@ body {
   background: $themeColor;
 
   &:active {
-    background: $focusColor;
+    background: $lightFocusColor;
+    transition: all.5s;
   }
 }
 
@@ -196,6 +199,7 @@ h3 {
     height: 0.3rem;
     background-image: linear-gradient(to right, $themeGradient);
     border-radius: $border-radius;
+    transition: width 1s;
   }
 }
 
@@ -217,7 +221,7 @@ h4 {
 }
 
 #write>h4.md-focus {
-  border-bottom-color: $focusColor;
+  border-bottom-color: $lightFocusColor;
   transition: border-bottom-color 0.5s linear;
 }
 
@@ -254,7 +258,7 @@ h5 {
 #write>h5.md-focus:before {
   width: auto;
   height: auto;
-  background-color: $focusColor;
+  background-color: $lightFocusColor;
   color: #ffffff;
 }
 
@@ -266,11 +270,13 @@ sup.md-footnote {
 p {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
+  transition: all .8s ease-in;
 }
 
 p.md-focus>span.md-plain.md-expand {
-  border-bottom: 2px dashed $focusColor;
+  border-bottom: 2px dashed $lightFocusColor;
   color: $focusColor;
+  transition: all .8s ease-in;
 }
 
 a {
@@ -634,7 +640,7 @@ table th {
 }
 
 mark {
-  background-color: $focusColor;
+  background-color: $lightFocusColor;
   color: var(--rawblock-edit-panel-bd);
 }
 
@@ -704,36 +710,24 @@ pre.md-fences {
 
 // Todo list
 
+
 .task-list {
   padding-left: 0;
 }
 
-.md-task-list-item>input {
-  margin-left: -1.3em;
-  margin-top: 0.3rem;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  ::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    padding-left: 0px;
-    color: #fff;
-    text-align: center;
-    border: 1px solid $themeColor;
-  }
-
-  :checked::after {
-    content: "✓";
-    font-size: 12px;
-    background-color: $themeColor;
-    border-radius: 2px;
-  }
+.md-task-list-item input{
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border:1px solid $themeColor;
+    }
+    &:checked:before,[checked]:before{
+      background:linear-gradient($themeGradient)
+    }
 }
 
 // Sidebar

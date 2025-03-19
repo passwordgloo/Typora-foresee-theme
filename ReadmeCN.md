@@ -4,7 +4,7 @@
 
 <p align="center"><a href="https://github.com/passwordgloo/Typora-foresee-theme/blob/study/ReadmeCN.md">Readme</a>&nbsp;|&nbsp;<a href="https://github.com/passwordgloo/Typora-foresee-theme/blob/study/CHANGELOG_CN.md">CHANGELOG</a>&nbsp;|&nbsp;<a href="https://github.com/passwordgloo/Typora-foresee-theme/blob/study/LICENSE">LICENSE</a></p>
 
-> ![](https://user-images.githubusercontent.com/90091016/271819155-72fe5b24-cd1c-4ceb-a32d-e559dbcaea63.png) 通过 [English version](ReadmeCN.md)了解更多详情
+> ![](https://user-images.githubusercontent.com/90091016/271819155-72fe5b24-cd1c-4ceb-a32d-e559dbcaea63.png)访问 [English version](ReadmeCN.md)了解更多详情
 
 ---
 
@@ -60,7 +60,7 @@ kbd元素样式如下
 
 1. 默认引用块样式使用单色
 
-你可以输入 <kbd>></kbd> 去插入默认引用块
+你可以输入 `>` 去插入默认引用块
 
 ![截屏2024 07 24 21.25.23](https://img.picgo.net/2024/07/24/2024-07-24-21.25.2306902135529210e2.png)
 

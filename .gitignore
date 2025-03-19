@@ -1,0 +1,9 @@
+# pnpm environment
+package.json
+pnpm-lock.yaml
+
+# node
+node_modules
+
+# czg
+.czrc
