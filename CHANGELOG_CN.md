@@ -1,5 +1,22 @@
 # 更新日志
 
+## 0.0.5.2 (2025-03-19)
+
+### Documentation
+
+* **readme:** :memo: 添加0.0.5.2新增功能 ([5d698df](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/5d698dfbd69be367217ef159806f2a9be19c9fb8))
+
+
+### Styles
+
+* **theme:** :lipstick: add ease-in-out animation transition in title ([1687dc7](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/1687dc762d20e0d9d89c0d099fef908b822ab79a)), closes [#13](https://gitee.com/passwordgloo/Typora-foresee-theme/issues/13)
+
+### BREAKING CHANGES
+
+* **readme:** changelog-cli自动输出工具
+* **theme:** use czg & changelog-cli auto generate changelog
+fix switch theme light style bug in windows
+
 ## 0.0.0.5.1(2025-02-15)
 
 Readme: 添加changelog和demo
