@@ -29,6 +29,11 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 ## BREAKING CHANGES
 
+### Todo list
+
+>[!note]
+>use gradient style
+
 ### Code Style
 
 #### Inline code
@@ -138,6 +143,11 @@ You can type <kbd>></kbd> to insert blockquote by default
 ### Badge
 
 ![PixPin 2024 08 18 17 19 26](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)
+
+## Todo
+
+- [ ] add more animation style
+- [ ] add pdf input style
 
 ## Personalities
 

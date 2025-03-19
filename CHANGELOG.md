@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 0.0.5.2 (2025-03-19)
+
+### Styles
+
+* **theme:** :lipstick: add ease-in-out animation transition in title ([1687dc7](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/1687dc762d20e0d9d89c0d099fef908b822ab79a)), closes [#13](https://gitee.com/passwordgloo/Typora-foresee-theme/issues/13)
+
+
+### BREAKING CHANGES
+
+* **theme:** use czg & changelog-cli auto generate changelog
+fix switch theme light style bug in windows
+
 ## 0.0.5.1（2025-02-15）
 
 Readme: Add CHANGELOG and demo
