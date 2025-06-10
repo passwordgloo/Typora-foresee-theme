@@ -1,7 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-	<title>success-svg</title>
-	<style>
-		.s0 { fill: #32cd32 } 
-	</style>
-	<path id="Layer" fill-rule="evenodd" class="s0" d="m10 20c-5.5 0-10-4.5-10-10 0-5.5 4.5-10 10-10 5.5 0 10 4.5 10 10 0 5.5-4.5 10-10 10zm-1.2-4.7l7.5-7.4c0.2-0.3 0.2-0.7 0-0.9l-0.9-0.9c-0.3-0.3-0.7-0.3-1 0l-6 6-2.8-2.8c-0.3-0.3-0.7-0.3-1 0l-0.9 0.9c-0.2 0.2-0.2 0.6 0 0.9l4.2 4.2c0.3 0.2 0.7 0.2 0.9 0z"/>
-</svg>

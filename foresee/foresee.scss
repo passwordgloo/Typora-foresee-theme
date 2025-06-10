@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.2
+version:0.0.5.3
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -57,6 +57,7 @@ $purple-gradient: #c471f5, #d66feb, #e46fe1, #f06fd7, #fa71cd;
 $green-gradient: #0ba360, #39b05d, #57bc5a, #72c856, #8ed451;
 
 // You can change theme color and theme gradient color
+
 /* 
 orange green 
 green blue
@@ -64,15 +65,15 @@ tomato purple
 blue purple
 */
 
-$themeColor: $blue;
+$themeColor: $green;
 
-$focusColor: $purple;
+$focusColor: $blue;
 
-$lightFocusColor:lighten($focusColor,20%);
+$lightFocusColor: lighten($focusColor, 20%);
 
-$themeGradient: $blue-gradient;
+$themeGradient: $green-gradient;
 
-$focusGradient: $purple-gradient;
+$focusGradient: $blue-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -102,6 +103,20 @@ $font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
   max-width: 914px;
 }  
 */
+
+// Windows
+
+.megamenu-menu-list li a.active {
+  background: $focusColor;
+}
+
+div#megamenu-section-open {
+  background: map-get($article, light);
+}
+
+#megamenu-menu-sidebar {
+  background: map-get($sidebar, light);
+}
 
 html {
   font-size: 1rem;
@@ -147,9 +162,8 @@ body {
 
 // Header style
 
-@mixin header-common {
-  margin-top: .8rem;
-  margin-bottom: .8rem;
+@mixin title-common {
+  margin:0 0 .5rem 0;
   line-height: 1.4;
   cursor: text;
   font-family: $font-family;
@@ -167,20 +181,19 @@ h2 {
   font-size: 1.8rem;
   display: inline-flex;
   align-items: center;
-  margin-bottom: 0;
-
+  @include title-common();
   &::before {
-    content: '';
-    width: .5rem;
+    content: "";
+    width: 0.5rem;
     height: 2rem;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     background: linear-gradient(45deg, $themeGradient);
     border-radius: $border-radius;
   }
 }
 
 h2:hover::before,
-#write>h2.md-focus::after {
+#write > h2.md-focus::after {
   background: linear-gradient(45deg, $focusGradient);
 }
 
@@ -188,13 +201,13 @@ h3 {
   position: relative;
   font-size: 1.6rem;
   font-weight: 700;
-  @include header-common();
+  @include title-common();
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -.3rem;
+    bottom: -0.3rem;
     width: 3rem;
     height: 0.3rem;
     background-image: linear-gradient(to right, $themeGradient);
@@ -203,7 +216,7 @@ h3 {
   }
 }
 
-#write>h3.md-focus::after {
+#write > h3.md-focus::after {
   content: "";
   width: 6rem;
   height: 0.3rem;
@@ -217,10 +230,10 @@ h4 {
   font-weight: 500;
   line-height: 1.43;
   border-bottom: 1px dashed $themeColor;
-  @include header-common();
+  @include title-common();
 }
 
-#write>h4.md-focus {
+#write > h4.md-focus {
   border-bottom-color: $lightFocusColor;
   transition: border-bottom-color 0.5s linear;
 }
@@ -229,7 +242,7 @@ h5 {
   color: $themeColor;
   font-weight: 300;
   font-size: 1.2rem;
-  @include header-common();
+  @include title-common();
 
   &:hover {
     animation: bounce 2s infinite;
@@ -237,7 +250,6 @@ h5 {
 }
 
 @keyframes bounce {
-
   0%,
   100%,
   20%,
@@ -255,7 +267,7 @@ h5 {
   }
 }
 
-#write>h5.md-focus:before {
+#write > h5.md-focus:before {
   width: auto;
   height: auto;
   background-color: $lightFocusColor;
@@ -270,13 +282,13 @@ sup.md-footnote {
 p {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  transition: all .8s ease-in;
+  transition: all 0.8s ease-in;
 }
 
-p.md-focus>span.md-plain.md-expand {
+p.md-focus > span.md-plain.md-expand {
   border-bottom: 2px dashed $lightFocusColor;
   color: $focusColor;
-  transition: all .8s ease-in;
+  transition: all 0.8s ease-in;
 }
 
 a {
@@ -333,8 +345,8 @@ table {
   margin: 0.8em 0;
 }
 
-li>ol,
-li>ul {
+li > ol,
+li > ul {
   margin: 0 0;
 }
 
@@ -373,7 +385,7 @@ li::marker {
   line-height: inherit;
   min-height: 1.5rem;
   margin: 1em 0;
-  padding: 12px 0 8px 10px;
+  padding: 10px 0 8px 10px;
   border-radius: $border-radius;
   border-left: 8px solid transparent;
   background-clip: padding-box, border-box;
@@ -410,14 +422,13 @@ blockquote {
   }
 }
 
-h2+blockquote,
+h2 + blockquote,
 blockquote[alt="green"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $green-gradient);
   color: $green;
 
-  //change svg color
   img {
     @include blockquote-img();
     color: $green;
@@ -425,7 +436,7 @@ blockquote[alt="green"] {
   }
 }
 
-h3+blockquote,
+h3 + blockquote,
 blockquote[alt="blue"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -438,7 +449,7 @@ blockquote[alt="blue"] {
   }
 }
 
-h4+blockquote,
+h4 + blockquote,
 blockquote[alt="orange"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -451,7 +462,7 @@ blockquote[alt="orange"] {
   }
 }
 
-h5+blockquote,
+h5 + blockquote,
 blockquote[alt="purple"] {
   @include blockquote-common();
   background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
@@ -478,7 +489,7 @@ blockquote[alt="red"] {
 
 // Use for blockquote(Github style)
 @mixin bar {
-  padding: 10px 20px;
+  padding: 4px 10px;
   border-radius: $border-radius;
   color: white;
   align-items: center;
@@ -544,7 +555,7 @@ section[alt="note"] {
   background: linear-gradient(to right, $black-gradient);
 
   &::before {
-    content: url("./foresee/icon/info.svg");
+    content: url("./icon/info.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $black-gradient);
   }
@@ -555,7 +566,7 @@ section[alt="info"] {
   background: linear-gradient(to right, $blue-gradient);
 
   &::before {
-    content: url("./foresee/icon/correct.svg");
+    content: url("./icon/correct.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $blue-gradient);
   }
@@ -566,7 +577,7 @@ section[alt="tip"] {
   background: linear-gradient(to right, $green-gradient);
 
   &::before {
-    content: url("./foresee/icon/question.svg");
+    content: url("./icon/question.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $green-gradient);
   }
@@ -577,7 +588,7 @@ section[alt="warning"] {
   background: linear-gradient(to right, $orange-gradient);
 
   &::before {
-    content: url("./foresee/icon/alert.svg");
+    content: url("./icon/alert.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $orange-gradient);
   }
@@ -588,7 +599,7 @@ section[alt="caution"] {
   background: linear-gradient(to right, $tomato-gradient);
 
   &::before {
-    content: url("./foresee/icon/caution.svg");
+    content: url("./icon/caution.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $tomato-gradient);
   }
@@ -599,7 +610,7 @@ section[alt="important"] {
   background: linear-gradient(to right, $purple-gradient);
 
   &::before {
-    content: url("./foresee/icon/alert.svg");
+    content: url("./icon/alert.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $purple-gradient);
   }
@@ -710,24 +721,24 @@ pre.md-fences {
 
 // Todo list
 
-
 .task-list {
   padding-left: 0;
 }
 
-.md-task-list-item input{
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border:1px solid $themeColor;
-    }
-    &:checked:before,[checked]:before{
-      background:linear-gradient($themeGradient)
-    }
+.md-task-list-item input {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $themeColor;
+  }
+  &:checked:before,
+  [checked]:before {
+    background: linear-gradient($themeGradient);
+  }
 }
 
 // Sidebar
@@ -783,7 +794,7 @@ pre.md-fences {
 }
 
 .on-focus-mode .md-end-block:not(.md-focus) img,
-.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+.on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
   opacity: #686868 !important;
 }
 
@@ -791,7 +802,7 @@ pre.md-fences {
   color: #686868;
 }
 
-.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
 .on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
   color: #686868 !important;
 }
@@ -801,7 +812,7 @@ pre.md-fences {
   color: #fff;
 }
 
-.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+.on-focus-mode #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
   color: #686868 !important;
 }
 
@@ -842,7 +853,7 @@ pre.md-fences {
   background-color: map-get($article, light);
 }
 
-#megamenu-menu-list>li>a {
+#megamenu-menu-list > li > a {
   border: none;
   color: var(--text-color);
 }
@@ -859,7 +870,7 @@ pre.md-fences {
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active,
-.open>.dropdown-toggle.btn-default {
+.open > .dropdown-toggle.btn-default {
   color: white;
   border: 1px solid #ddd;
   background-color: inherit;
@@ -954,12 +965,12 @@ pre.md-fences {
   height: 32px;
 }
 
-.file-library-node.active>.file-node-content,
+.file-library-node.active > .file-node-content,
 .file-list-item.active {
   color: $focusColor;
 }
 
-.file-library-node.active>.file-node-background {
+.file-library-node.active > .file-node-background {
   background-color: var(--bg-color);
   border-color: $themeColor;
 }
@@ -1031,10 +1042,10 @@ footer.ty-footer {
 
 .cm-s-inner .CodeMirror-line::selection,
 .cm-s-inner .CodeMirror-line::-moz-selection,
-.cm-s-inner .CodeMirror-line>span::selection,
-.cm-s-inner .CodeMirror-line>span::-moz-selection,
-.cm-s-inner .CodeMirror-line>span>span::selection,
-.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1124,7 +1135,6 @@ footer.ty-footer {
 // Print config
 
 @media print {
-
   table,
   pre {
     page-break-inside: avoid;
@@ -1148,6 +1158,14 @@ footer.ty-footer {
     --control-text-hover-color: $themeColor;
   }
 
+  div#megamenu-section-open {
+    background-color: map-get($article, dark);
+  }
+
+  #megamenu-menu-sidebar {
+    background: map-get($sidebar, dark);
+  }
+
   #top-titlebar,
   #top-titlebar * {
     color: map-get($display, dark);
@@ -1162,7 +1180,7 @@ footer.ty-footer {
     background-color: map-get($article, light);
   }
 
-  // Code_style(dark mode)
+  /*  Code_style(dark mode) */
 
   .cm-s-inner.CodeMirror {
     background-color: map-get($sidebar, dark) !important;
@@ -1180,10 +1198,10 @@ footer.ty-footer {
 
   .cm-s-inner .CodeMirror-line::selection,
   .cm-s-inner .CodeMirror-line::-moz-selection,
-  .cm-s-inner .CodeMirror-line>span::selection,
-  .cm-s-inner .CodeMirror-line>span::-moz-selection,
-  .cm-s-inner .CodeMirror-line>span>span::selection,
-  .cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+  .cm-s-inner .CodeMirror-line > span::selection,
+  .cm-s-inner .CodeMirror-line > span::-moz-selection,
+  .cm-s-inner .CodeMirror-line > span > span::selection,
+  .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
     background: rgba(255, 255, 255, 0.1);
   }
 

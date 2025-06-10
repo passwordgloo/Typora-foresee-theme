@@ -132,14 +132,6 @@ You can type <kbd>></kbd> to insert blockquote by default
 
 ![PixPin 2024 08 18 17 15 57](https://img.picgo.net/2024/12/05/2024-12-05-23.43.16f1e883c9ba6359d5.png)
 
->[!tip]
-> Provide local small icon in which foldername called `icon`
-
->[!important]
-> Copy and save in a fixed location on your computer, and directly reference the file to the image
-
-![badge592266035bf8b236](https://img.picgo.net/2024/05/27/badge592266035bf8b236067398135730b8b5.png)
-
 ### Badge
 
 ![PixPin 2024 08 18 17 19 26](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)

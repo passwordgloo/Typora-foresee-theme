@@ -1,7 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="25" height="20">
-	<title>battery-full-svg</title>
-	<style>
-		.s0 { fill: #32cd32 } 
-	</style>
-	<path id="Layer" fill-rule="evenodd" class="s0" d="m608 144v16h8c13.3 0 24 10.7 24 24v144c0 13.3-10.7 24-24 24h-8v16c0 26.5-21.5 48-48 48h-512c-26.5 0-48-21.5-48-48v-224c0-26.5 21.5-48 48-48h512c26.5 0 48 21.5 48 48zm-544 16v192h480v-64h32v-64h-32v-64zm448 160h-416v-128h416z"/>
-</svg>
