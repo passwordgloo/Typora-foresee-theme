@@ -140,6 +140,7 @@ You can type <kbd>></kbd> to insert blockquote by default
 
 - [ ] add more animation style
 - [ ] add pdf input style
+- [ ] Distinguish between dark and light reference block styles
 
 ## Personalities
 

@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.3
+version:0.0.5.4
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -65,15 +65,15 @@ tomato purple
 blue purple
 */
 
-$themeColor: $green;
+$themeColor: $orange;
 
-$focusColor: $blue;
+$focusColor: $green;
 
 $lightFocusColor: lighten($focusColor, 20%);
 
-$themeGradient: $green-gradient;
+$themeGradient: $orange-gradient;
 
-$focusGradient: $blue-gradient;
+$focusGradient: $green-gradient;
 
 :root {
   --bg-color: map-get($article, light);
@@ -282,13 +282,18 @@ sup.md-footnote {
 p {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  transition: all 0.8s ease-in;
+  transition: all ease-in-out .8s;
 }
 
 p.md-focus > span.md-plain.md-expand {
-  border-bottom: 2px dashed $lightFocusColor;
-  color: $focusColor;
+  // border-bottom: 2px dashed $lightFocusColor;
+  background:linear-gradient(to right,$focusGradient) no-repeat right bottom;
+  background-size: 0 2px;
   transition: all 0.8s ease-in;
+  &:hover{
+      background-size: 100% 2px;
+      transition: background-size 0.8s ease-in;
+  }
 }
 
 a {
@@ -1209,75 +1214,46 @@ footer.ty-footer {
     background: rgba(255, 255, 255, 0.1);
   }
 
-  .cm-s-inner .CodeMirror-linenumber {
-    color: #6d8a88;
-  }
+  $code-linenumber-dark: #6d8a88;
+  $code-comment-dark: #7c7c7c;
+  $code-string-dark: #a8ff60;
+  $code-number-dark: #cd3f45;
 
-  .cm-s-inner span.cm-comment {
-    color: #7c7c7c;
-  }
+  .cm-s-inner .CodeMirror-linenumber { color: $code-linenumber-dark; }
+  .cm-s-inner span.cm-comment { color: $code-comment-dark; }
+  .cm-s-inner span.cm-string, .cm-s-inner span.cm-string-2 { color: $code-string-dark; }
+  .cm-s-inner span.cm-number { color: $code-number-dark; }
 
-  .cm-s-inner span.cm-string,
-  .cm-s-inner span.cm-string-2 {
-    color: #a8ff60;
-  }
 
-  .cm-s-inner span.cm-number {
-    color: #cd3f45;
-  }
+  $code-variable-dark: #55b5db;
+  $code-variable-2-dark: #a074c4;
+  $code-def-dark: #55b5db;
+  $code-keyword-dark: #ff79c6;
+  $code-operator-dark: #9fca56;
 
-  .cm-s-inner span.cm-variable {
-    color: #55b5db;
-  }
+  .cm-s-inner span.cm-variable { color: $code-variable-dark; }
+  .cm-s-inner span.cm-variable-2 { color: $code-variable-2-dark; }
+  .cm-s-inner span.cm-def { color: $code-def-dark; }
+  .cm-s-inner span.cm-keyword { color: $code-keyword-dark; }
+  .cm-s-inner span.cm-operator { color: $code-operator-dark; }
 
-  .cm-s-inner span.cm-variable-2 {
-    color: #a074c4;
-  }
+  $code-atom-dark: #cd3f45;
+  $code-meta-dark: #55b5db;
+  $code-tag-dark: #018df3;
+  $code-attribute-dark: #e91ad8;
+  $code-qualifier-dark: #9fca56;
+  $code-property-dark: #a074c4;
+  $code-type-dark: #9fca56;
+  $code-builtin-dark: #9fca56;
 
-  .cm-s-inner span.cm-def {
-    color: #55b5db;
-  }
-
-  .cm-s-inner span.cm-keyword {
-    color: #ff79c6;
-  }
-
-  .cm-s-inner span.cm-operator {
-    color: #9fca56;
-  }
-
-  .cm-s-inner span.cm-atom {
-    color: #cd3f45;
-  }
-
-  .cm-s-inner span.cm-meta {
-    color: #55b5db;
-  }
-
-  .cm-s-inner span.cm-tag {
-    color: #018df3;
-  }
-
-  .cm-s-inner span.cm-attribute {
-    color: #e91ad8;
-  }
-
-  .cm-s-inner span.cm-qualifier {
-    color: #9fca56;
-  }
-
-  .cm-s-inner span.cm-property {
-    color: #a074c4;
-  }
-
-  .cm-s-inner span.cm-variable-3,
-  .cm-s-inner span.cm-type {
-    color: #9fca56;
-  }
-
-  .cm-s-inner span.cm-builtin {
-    color: #9fca56;
-  }
+  .cm-s-inner span.cm-atom { color: $code-atom-dark; }
+  .cm-s-inner span.cm-meta { color: $code-meta-dark; }
+  .cm-s-inner span.cm-tag { color: $code-tag-dark; }
+  .cm-s-inner span.cm-attribute { color: $code-attribute-dark; }
+  .cm-s-inner span.cm-qualifier { color: $code-qualifier-dark; }
+  .cm-s-inner span.cm-property { color: $code-property-dark; }
+  .cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: $code-type-dark; }
+  .cm-s-inner span.cm-builtin { color: $code-builtin-dark; }
 
   .cm-s-inner .CodeMirror-activeline-background {
     background: rgba(255, 255, 255, 0.1);

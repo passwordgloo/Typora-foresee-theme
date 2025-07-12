@@ -1,5 +1,22 @@
 # 更新日志
 
+## 0.0.5.4 (2025-07-12)
+
+### Styles
+
+* **theme:** :lipstick: 重新设计段落专注模式样式
+
+### BREAKING CHANGES
+
+* **theme:** 使用AI技术优化样式文件，减少代码复用
+
+## 0.0.5.3 (2025-06-10)
+
+### Styles
+
+* **theme:** :lipstick: 移除20像素图标
+（[cb60a1](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/cb60a1cb41628ad026d17aabea5634c3958cbfb0)）
+
 ## 0.0.5.2 (2025-03-19)
 
 ### Documentation

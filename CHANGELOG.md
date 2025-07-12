@@ -1,11 +1,27 @@
 # CHANGELOG
 
+## 0.0.5.4 (2025-07-12)
+
+### Styles
+
+* **theme:** :lipstick: redesign paragraph focus mode style
+
+### BREAKING CHANGES
+
+* **theme:** Use AI technology to optimize style files
+
+## 0.0.5.3 (2025-06-10)
+
+### Styles
+
+* **theme:** :lipstick: Removed the 20px icon
+（[cb60a1](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/cb60a1cb41628ad026d17aabea5634c3958cbfb0)）
+
 ## 0.0.5.2 (2025-03-19)
 
 ### Documentation
 
 * **readme:** :memo: 添加0.0.5.2新增功能 ([5d698df](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/5d698dfbd69be367217ef159806f2a9be19c9fb8))
-
 
 ### Styles
 
