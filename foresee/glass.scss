@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.5
+version:0.0.5.6
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -30,13 +30,33 @@ $textColor: (
   dark: #323232
 );
 
+$maclong: (
+  light: (
+    black: #e0e0e0,
+    blue: #b3daff,
+    orange: #ffd6ba,
+    purple: #d9c5ff,
+    green: rgba(102, 237, 194, 0.666),
+    tomato: #ffc2d1,
+    red: rgba(236, 60, 60, 0.453)
+  ),
+  dark: (
+    black: #333333,
+    blue: #1e3a8a,
+    orange: rgba(200, 156, 37, 0.3),
+    purple: rgba(137, 65, 180, 0.3),
+    green: rgba(30, 190, 140, 0.3),
+    tomato: rgba(197, 43, 74, 0.3)
+  )
+);
+
 $tomato: #ff6347;
 
-$purple: #ff00ff;
+$purple: #f048d7;
 
-$blue: #00bfff;
+$blue: #3c71f6;
 
-$green: #00cd66;
+$green: #1e7047;
 
 $orange: #ff8c00;
 
@@ -164,114 +184,77 @@ body {
 
 @mixin title-common {
   margin: 0 0 0.5rem 0;
-  line-height: 1.4;
   cursor: text;
+  color: transparent;
   font-family: $font-family;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, $themeGradient);
+  transition: all 0.5s ease;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 2000;
-  font-family: $font-family;
-  line-height: 1.2;
   text-align: center;
+  @include title-common;
+  &:hover {
+    transform: scale(1.03);
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
 }
 
 h2 {
   font-size: 1.8rem;
-  display: inline-flex;
-  align-items: center;
-  @include title-common();
-  &::before {
-    content: "";
-    width: 0.5rem;
-    height: 2rem;
-    margin-right: 0.5rem;
-    background: linear-gradient(45deg, $themeGradient);
-    border-radius: $border-radius;
+  @include title-common;
+  &:hover {
+    transform: translateY(-4px);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 }
 
-h2:hover::before,
-#write > h2.md-focus::after {
-  background: linear-gradient(45deg, $focusGradient);
+#write > h2.md-focus {
+  transform: translateY(-4px);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
   position: relative;
   font-size: 1.6rem;
   font-weight: 700;
-  @include title-common();
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.3rem;
-    width: 3rem;
-    height: 0.3rem;
-    background-image: linear-gradient(to right, $themeGradient);
-    border-radius: $border-radius;
-    transition: width 1s;
+  @include title-common;
+  &:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
-}
-
-#write > h3.md-focus::after {
-  content: "";
-  width: 6rem;
-  height: 0.3rem;
-  background-image: linear-gradient(to right, $focusGradient);
-  border-radius: $border-radius;
-  transition: width 1s ease-in-out;
 }
 
 h4 {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.43;
-  border-bottom: 1px dashed $themeColor;
-  @include title-common();
-}
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, $themeGradient, transparent) 1;
+  @include title-common;
 
-#write > h4.md-focus {
-  border-bottom-color: $lightFocusColor;
-  transition: border-bottom-color 0.5s linear;
+  &:hover {
+    border-image: linear-gradient(to right, $focusGradient, transparent) 1;
+    background-image: linear-gradient(to right, $focusGradient);
+    text-shadow: 0 3px 9px rgba(0, 0, 0, 0.06);
+  }
 }
 
 h5 {
   color: $themeColor;
   font-weight: 300;
   font-size: 1.2rem;
-  @include title-common();
+  @include title-common;
 
   &:hover {
-    animation: bounce 2s infinite;
+    background-image: linear-gradient(to right, $focusGradient);
+    transform: translateY(-2px);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   }
-}
-
-@keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-1rem);
-  }
-
-  60% {
-    transform: translateY(-1rem);
-  }
-}
-
-#write > h5.md-focus:before {
-  width: auto;
-  height: auto;
-  background-color: $lightFocusColor;
-  color: #ffffff;
 }
 
 sup.md-footnote {
@@ -305,40 +288,45 @@ a {
 // Badge
 
 @mixin badge-common {
-  margin-left: 0.2em;
-  padding: 0 0.5em;
-  color: white;
-  border-radius: $border-radius;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 4px;
+  opacity: 0.85;
+  transition: all 0.2s ease;
 }
 
 span[alt="black"] {
   @include badge-common();
-  background-image: linear-gradient(to right, $black-gradient);
+  background-color: map-get(map-get($maclong, light), black);
 }
 
 span[alt="blue"] {
   @include badge-common();
-  background-image: linear-gradient(to right, $blue-gradient);
+  background-color: map-get(map-get($maclong, light), blue);
 }
 
 span[alt="orange"] {
   @include badge-common();
-  background-image: linear-gradient(to right, $orange-gradient);
+  background-color: map-get(map-get($maclong, light), orange);
 }
 
 span[alt="purple"] {
   @include badge-common();
-  background-image: linear-gradient(to right, $purple-gradient);
+  background-color: map-get(map-get($maclong, light), purple);
 }
 
 span[alt="green"] {
   @include badge-common();
-  background-image: linear-gradient(to right, $green-gradient);
-}
-
-span[alt="red"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $tomato-gradient);
+  background-color: map-get(map-get($maclong, light), green);
 }
 
 p,
@@ -383,131 +371,8 @@ li::marker {
   color: $themeColor;
 }
 
-// Blockquote style , default single color
+// Blockquote style
 
-@mixin blockquote-common {
-  text-indent: 0em;
-  line-height: inherit;
-  min-height: 1.5rem;
-  margin: 1em 0;
-  padding: 10px 0 8px 10px;
-  border-radius: $border-radius;
-  border-left: 8px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
-  overflow: hidden;
-}
-
-// Windows blockquote icon
-/* @mixin blockquote-img {
-  position: relative;
-  transform: translateX(-80px);
-  height: 1rem;
-  margin-right: .2rem;
-} */
-
-// Mac blockquote icon
-@mixin blockquote-img {
-  position: relative;
-  transform: translateY(26.8px);
-  height: 1rem;
-  margin-right: 0.2rem;
-}
-
-blockquote {
-  @include blockquote-common();
-  color: $themeColor;
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
-    linear-gradient(0deg, $themeColor 0%, $themeColor 100%);
-  color: var(--text-color);
-
-  img {
-    @include blockquote-img();
-    filter: drop-shadow($themeColor 0px -28px);
-  }
-}
-
-h2 + blockquote,
-blockquote[alt="green"] {
-  @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
-    linear-gradient(0deg, $green-gradient);
-  color: $green;
-
-  img {
-    @include blockquote-img();
-    color: $green;
-    filter: drop-shadow($green 0px -28px);
-  }
-}
-
-h3 + blockquote,
-blockquote[alt="blue"] {
-  @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
-    linear-gradient(0deg, $blue-gradient);
-  color: $blue;
-
-  img {
-    @include blockquote-img();
-    filter: drop-shadow($blue 0px -28px);
-  }
-}
-
-h4 + blockquote,
-blockquote[alt="orange"] {
-  @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
-    linear-gradient(0deg, $orange-gradient);
-  color: $orange;
-
-  img {
-    @include blockquote-img();
-    filter: drop-shadow($orange 0px -28px);
-  }
-}
-
-h5 + blockquote,
-blockquote[alt="purple"] {
-  @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
-    linear-gradient(0deg, $purple-gradient);
-  color: $purple;
-
-  img {
-    @include blockquote-img();
-    filter: drop-shadow($purple 0px -28px);
-  }
-}
-
-blockquote[alt="red"] {
-  @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
-    linear-gradient(0deg, $tomato-gradient);
-  color: $red;
-
-  img {
-    @include blockquote-img();
-    filter: drop-shadow($purple 0px -28px);
-  }
-}
-
-.glass-effect {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-  padding: 30px;
-  transition: all 0.3s ease;
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
-  }
-}
-
-// Use for blockquote(Github style)
 @mixin bar {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -521,21 +386,35 @@ blockquote[alt="red"] {
   }
 }
 
-// Use for blockquote(icon bar mode)
-// %bar {
-//   @include bar();
-//   display: flex;
-// }
+%gfm_light {
+  @include bar();
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
 
-// %bar_icon {
-//   margin-left: -2rem;
-//   margin-right: 1rem;
-//   text-align: center;
-//   width: 1.5rem;
-//   height: 1.5rem;
-//   border-radius: 50%;
-//   border: 3px solid white;
-// }
+h2 + blockquote,
+blockquote[alt="green"] {
+  color: $green;
+}
+
+h3 + blockquote,
+blockquote[alt="blue"] {
+  color: $blue;
+}
+
+h4 + blockquote,
+blockquote[alt="orange"] {
+  color: $orange;
+}
+
+h5 + blockquote,
+blockquote[alt="purple"] {
+  color: $purple;
+}
+
+blockquote[alt="red"] {
+  color: $red;
+}
 
 .md-alert-text-container::after {
   color: white;
@@ -549,101 +428,39 @@ blockquote[alt="red"] {
 //   color: $themeColor;
 // }
 
-%gfm_light {
-  @include bar();
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-}
-
+blockquote[alt="blue"],
 .md-alert.md-alert-note {
+  background: map-get(map-get($maclong, light), blue);
   @extend %gfm_light;
 }
 
+h2 + blockquote,
+blockquote[alt="green"],
 .md-alert.md-alert-tip {
-  background-color: rgba(102, 237, 194, 0.666);
+  background-color: map-get(map-get($maclong, light), green);
   @extend %gfm_light;
 }
 
+h4 + blockquote,
+blockquote[alt="orange"],
 .md-alert.md-alert-warning {
   background: rgba(245, 158, 87, 0.3);
   @extend %gfm_light;
 }
 
+blockquote[alt="red"],
 .md-alert.md-alert-caution {
-  background: rgba(236, 60, 60, 0.453);
+  background-color: map-get(map-get($maclong, light), red);
   @extend %gfm_light;
 }
 
+h5 + blockquote,
+blockquote[alt="purple"],
 .md-alert.md-alert-important {
-  background: rgba(180, 81, 238, 0.415);
+  // background: rgba(180, 81, 238, 0.415);
+  background-color: map-get(map-get($maclong, light), purple);
   @extend %gfm_light;
 }
-
-// section[alt="note"] {
-//   @extend %bar;
-//   background: linear-gradient(to right, $black-gradient);
-
-//   &::before {
-//     content: url("./icon/info.svg");
-//     @extend %bar_icon;
-//     background: linear-gradient(to right, $black-gradient);
-//   }
-// }
-
-// section[alt="info"] {
-//   @extend %bar;
-//   background: linear-gradient(to right, $blue-gradient);
-
-//   &::before {
-//     content: url("./icon/correct.svg");
-//     @extend %bar_icon;
-//     background: linear-gradient(to right, $blue-gradient);
-//   }
-// }
-
-// section[alt="tip"] {
-//   @extend %bar;
-//   background: linear-gradient(to right, $green-gradient);
-
-//   &::before {
-//     content: url("./icon/question.svg");
-//     @extend %bar_icon;
-//     background: linear-gradient(to right, $green-gradient);
-//   }
-// }
-
-// section[alt="warning"] {
-//   @extend %bar;
-//   background: linear-gradient(to right, $orange-gradient);
-
-//   &::before {
-//     content: url("./icon/alert.svg");
-//     @extend %bar_icon;
-//     background: linear-gradient(to right, $orange-gradient);
-//   }
-// }
-
-// section[alt="caution"] {
-//   @extend %bar;
-//   background: linear-gradient(to right, $tomato-gradient);
-
-//   &::before {
-//     content: url("./icon/caution.svg");
-//     @extend %bar_icon;
-//     background: linear-gradient(to right, $tomato-gradient);
-//   }
-// }
-
-// section[alt="important"] {
-//   @extend %bar;
-//   background: linear-gradient(to right, $purple-gradient);
-
-//   &::before {
-//     content: url("./icon/alert.svg");
-//     @extend %bar_icon;
-//     background: linear-gradient(to right, $purple-gradient);
-//   }
-// }
 
 table {
   border-collapse: collapse;
@@ -1198,6 +1015,43 @@ footer.ty-footer {
   #top-titlebar,
   #top-titlebar * {
     color: map-get($display, dark);
+  }
+
+  @mixin badge-dark($color) {
+    background-color: map-get(map-get($maclong, dark), $color);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(80, 80, 80, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 4px;
+    opacity: 0.9;
+    transition: all 0.2s ease;
+  }
+
+  span[alt="black"] {
+    @include badge-dark(black);
+  }
+
+  span[alt="blue"] {
+    @include badge-dark(blue);
+  }
+
+  span[alt="orange"] {
+    @include badge-dark(orange);
+  }
+
+  span[alt="purple"] {
+    @include badge-dark(purple);
+  }
+
+  span[alt="green"] {
+    @include badge-dark(green);
   }
 
   // Use for blockquote(Github style)

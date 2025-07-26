@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.5
+version:0.0.5.6
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -491,6 +491,7 @@ kbd {
   padding: 0.3rem;
   margin-right: 0.4em;
   color: map-get($textColor, light);
+  border-radius: $border-radius;
   background-color: map-get($textColor, dark);
 }
 
