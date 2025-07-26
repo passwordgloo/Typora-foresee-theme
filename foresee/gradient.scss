@@ -1,0 +1,1266 @@
+/* 
+version:0.0.5.5
+author:passwordgloo
+mode:auto switch light and dark mode
+repo:https://github.com/passwordgloo/Typora-foresee-theme
+license:MIT
+*/
+
+// Custom colors
+
+/*  Interface color */
+
+$display: (
+  light: #fff,
+  dark: #666
+);
+
+$article: (
+  light: #fff,
+  dark: #323232
+);
+
+$sidebar: (
+  light: #f2f2f2,
+  dark: #3e3e3e
+);
+
+$textColor: (
+  light: #dedede,
+  dark: #323232
+);
+
+$tomato: #ff6347;
+
+$purple: #ff00ff;
+
+$blue: #00bfff;
+
+$green: #00cd66;
+
+$orange: #ff8c00;
+
+$red: #f14669;
+
+/* Gradient colors */
+
+$black-gradient: #596164, #646c70, #6f787d, #7a8389, #868f96;
+
+$blue-gradient: #005bea, #007bf9, #0097ff, #00affe, #00c6fb;
+
+$tomato-gradient: #ed2842, #f33d58, #f7506d, #fa6181, #fb7294;
+
+$orange-gradient: #e9a11a, #eab211, #e8c40a, #e5d50f, #dee71d;
+
+$purple-gradient: #c471f5, #d66feb, #e46fe1, #f06fd7, #fa71cd;
+
+$green-gradient: #0ba360, #39b05d, #57bc5a, #72c856, #8ed451;
+
+// You can change theme color and theme gradient color
+
+/* 
+orange green 
+green blue
+tomato purple
+blue purple
+*/
+
+$themeColor: $orange;
+
+$focusColor: $green;
+
+$lightFocusColor: lighten($focusColor, 20%);
+
+$themeGradient: $orange-gradient;
+
+$focusGradient: $green-gradient;
+
+:root {
+  --bg-color: map-get($article, light);
+  --select-text-bg-color: map-get($display, dark);
+  --text-color: map-get($textColor, dark);
+  --primary-color: $themeColor;
+  --rawblock-edit-panel-bd: map-get($sidebar, light);
+  --item-hover-bg-color: $themeColor;
+  --control-text-hover-color: $themeColor;
+  --md-char-color: rgba(72, 93, 108, 0.75);
+  --meta-content-color: var(--md-char-color);
+  --primary-btn-text-color: var(--text-color);
+  --active-file-bg-color: var(--bg-color);
+  --active-file-text-color: map-get($article, light);
+  --item-hover-text-color: map-get($display, light);
+}
+
+// Custom fonts and style
+
+$border-radius: 6px;
+
+$font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
+
+// You can change default page width
+
+/* #write {
+  max-width: 914px;
+}  
+*/
+
+// Windows
+
+.megamenu-menu-list li a.active {
+  background: $focusColor;
+}
+
+div#megamenu-section-open {
+  background: map-get($article, light);
+}
+
+#megamenu-menu-sidebar {
+  background: map-get($sidebar, light);
+}
+
+html {
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: $font-family;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  caret-color: var(--primary-color);
+}
+
+// Scrollbar style
+
+::-webkit-scrollbar-thumb {
+  background: $themeColor;
+
+  &:active {
+    background: $lightFocusColor;
+    transition: all.5s;
+  }
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+  background: rgba(230, 230, 230, 0.3);
+}
+
+.typora-node::-webkit-scrollbar {
+  width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+  background: rgba(250, 250, 250, 0.3);
+
+  &:active {
+    background: rgba(250, 250, 250, 0.5);
+  }
+}
+
+// Header style
+
+@mixin title-common {
+  margin:0 0 .5rem 0;
+  line-height: 1.4;
+  cursor: text;
+  font-family: $font-family;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 2000;
+  font-family: $font-family;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  @include title-common();
+  &::before {
+    content: "";
+    width: 0.5rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    background: linear-gradient(45deg, $themeGradient);
+    border-radius: $border-radius;
+  }
+}
+
+h2:hover::before,
+#write > h2.md-focus::after {
+  background: linear-gradient(45deg, $focusGradient);
+}
+
+h3 {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  @include title-common();
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 3rem;
+    height: 0.3rem;
+    background-image: linear-gradient(to right, $themeGradient);
+    border-radius: $border-radius;
+    transition: width 1s;
+  }
+}
+
+#write > h3.md-focus::after {
+  content: "";
+  width: 6rem;
+  height: 0.3rem;
+  background-image: linear-gradient(to right, $focusGradient);
+  border-radius: $border-radius;
+  transition: width 1s ease-in-out;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.43;
+  border-bottom: 1px dashed $themeColor;
+  @include title-common();
+}
+
+#write > h4.md-focus {
+  border-bottom-color: $lightFocusColor;
+  transition: border-bottom-color 0.5s linear;
+}
+
+h5 {
+  color: $themeColor;
+  font-weight: 300;
+  font-size: 1.2rem;
+  @include title-common();
+
+  &:hover {
+    animation: bounce 2s infinite;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-1rem);
+  }
+
+  60% {
+    transform: translateY(-1rem);
+  }
+}
+
+#write > h5.md-focus:before {
+  width: auto;
+  height: auto;
+  background-color: $lightFocusColor;
+  color: #ffffff;
+}
+
+sup.md-footnote {
+  background-color: var(--rawblock-edit-panel-bd);
+  color: $themeColor;
+}
+
+p {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  transition: all ease-in-out .8s;
+}
+
+p.md-focus > span.md-plain.md-expand {
+  // border-bottom: 2px dashed $lightFocusColor;
+  background:linear-gradient(to right,$focusGradient) no-repeat right bottom;
+  background-size: 0 2px;
+  transition: all 0.8s ease-in;
+  &:hover{
+      background-size: 100% 2px;
+      transition: background-size 0.8s ease-in;
+  }
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 2px solid $themeColor;
+}
+
+// Badge
+
+@mixin badge-common {
+  margin-left: 0.2em;
+  padding: 0 0.5em;
+  color: white;
+  border-radius: $border-radius;
+}
+
+span[alt="black"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $black-gradient);
+}
+
+span[alt="blue"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $blue-gradient);
+}
+
+span[alt="orange"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $orange-gradient);
+}
+
+span[alt="purple"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $purple-gradient);
+}
+
+span[alt="green"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $green-gradient);
+}
+
+span[alt="red"] {
+  @include badge-common();
+  background-image: linear-gradient(to right, $tomato-gradient);
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+  margin: 0 0;
+}
+
+hr {
+  margin: 16px 0;
+  border-top: 2px dashed $themeColor;
+}
+
+li p.first {
+  display: inline-block;
+}
+
+ul,
+ol {
+  padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+  margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+
+li::marker {
+  color: $themeColor;
+}
+
+// Blockquote style , default single color
+
+@mixin blockquote-common {
+  text-indent: 0em;
+  line-height: inherit;
+  min-height: 1.5rem;
+  margin: 1em 0;
+  padding: 10px 0 8px 10px;
+  border-radius: $border-radius;
+  border-left: 8px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  overflow: hidden;
+}
+
+// Windows blockquote icon
+/* @mixin blockquote-img {
+  position: relative;
+  transform: translateX(-80px);
+  height: 1rem;
+  margin-right: .2rem;
+} */
+
+// Mac blockquote icon
+@mixin blockquote-img {
+  position: relative;
+  transform: translateY(26.8px);
+  height: 1rem;
+  margin-right: 0.2rem;
+}
+
+blockquote {
+  @include blockquote-common();
+  color: $themeColor;
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+    linear-gradient(0deg, $themeColor 0%, $themeColor 100%);
+  color: var(--text-color);
+
+  img {
+    @include blockquote-img();
+    filter: drop-shadow($themeColor 0px -28px);
+  }
+}
+
+h2 + blockquote,
+blockquote[alt="green"] {
+  @include blockquote-common();
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+    linear-gradient(0deg, $green-gradient);
+  color: $green;
+
+  img {
+    @include blockquote-img();
+    color: $green;
+    filter: drop-shadow($green 0px -28px);
+  }
+}
+
+h3 + blockquote,
+blockquote[alt="blue"] {
+  @include blockquote-common();
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+    linear-gradient(0deg, $blue-gradient);
+  color: $blue;
+
+  img {
+    @include blockquote-img();
+    filter: drop-shadow($blue 0px -28px);
+  }
+}
+
+h4 + blockquote,
+blockquote[alt="orange"] {
+  @include blockquote-common();
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+    linear-gradient(0deg, $orange-gradient);
+  color: $orange;
+
+  img {
+    @include blockquote-img();
+    filter: drop-shadow($orange 0px -28px);
+  }
+}
+
+h5 + blockquote,
+blockquote[alt="purple"] {
+  @include blockquote-common();
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+    linear-gradient(0deg, $purple-gradient);
+  color: $purple;
+
+  img {
+    @include blockquote-img();
+    filter: drop-shadow($purple 0px -28px);
+  }
+}
+
+blockquote[alt="red"] {
+  @include blockquote-common();
+  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+    linear-gradient(0deg, $tomato-gradient);
+  color: $red;
+
+  img {
+    @include blockquote-img();
+    filter: drop-shadow($purple 0px -28px);
+  }
+}
+
+// Use for blockquote(Github style)
+@mixin bar {
+  padding: 4px 10px;
+  border-radius: $border-radius;
+  color: white;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-left: none !important;
+}
+
+// Use for blockquote(icon bar mode)
+%bar {
+  @include bar();
+  display: flex;
+}
+
+%bar_icon {
+  margin-left: -2rem;
+  margin-right: 1rem;
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.md-alert-text-container::after {
+  color: white;
+}
+
+.md-alert-text-note,
+.md-alert-text-caution,
+.md-alert-text-tip,
+.md-alert-text-important,
+.md-alert-text-warning {
+  color: white;
+}
+
+.md-alert.md-alert-note {
+  @include bar();
+  background: linear-gradient(to right, $black-gradient);
+}
+
+.md-alert.md-alert-caution {
+  @include bar();
+  background: linear-gradient(to right, $tomato-gradient);
+}
+
+.md-alert.md-alert-tip {
+  @include bar();
+  background: linear-gradient(to right, $green-gradient);
+}
+
+.md-alert.md-alert-important {
+  @include bar();
+  background: linear-gradient(to right, $purple-gradient);
+}
+
+.md-alert.md-alert-warning {
+  @include bar();
+  background: linear-gradient(to right, $orange-gradient);
+}
+
+section[alt="note"] {
+  @extend %bar;
+  background: linear-gradient(to right, $black-gradient);
+
+  &::before {
+    content: url("./icon/info.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $black-gradient);
+  }
+}
+
+section[alt="info"] {
+  @extend %bar;
+  background: linear-gradient(to right, $blue-gradient);
+
+  &::before {
+    content: url("./icon/correct.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $blue-gradient);
+  }
+}
+
+section[alt="tip"] {
+  @extend %bar;
+  background: linear-gradient(to right, $green-gradient);
+
+  &::before {
+    content: url("./icon/question.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $green-gradient);
+  }
+}
+
+section[alt="warning"] {
+  @extend %bar;
+  background: linear-gradient(to right, $orange-gradient);
+
+  &::before {
+    content: url("./icon/alert.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $orange-gradient);
+  }
+}
+
+section[alt="caution"] {
+  @extend %bar;
+  background: linear-gradient(to right, $tomato-gradient);
+
+  &::before {
+    content: url("./icon/caution.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $tomato-gradient);
+  }
+}
+
+section[alt="important"] {
+  @extend %bar;
+  background: linear-gradient(to right, $purple-gradient);
+
+  &::before {
+    content: url("./icon/alert.svg");
+    @extend %bar_icon;
+    background: linear-gradient(to right, $purple-gradient);
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  word-break: initial;
+
+  td {
+    font-weight: normal;
+    text-align: left;
+
+    &::selection {
+      background-color: map-get($article, light);
+      color: map-get($display, light);
+    }
+  }
+}
+
+thead,
+th,
+td {
+  border: 1px solid $themeColor;
+}
+
+th,
+td {
+  padding: 0.6em;
+  font-family: $font-family;
+}
+
+table th {
+  color: $themeColor;
+  text-align: center;
+}
+
+mark {
+  background-color: $lightFocusColor;
+  color: var(--rawblock-edit-panel-bd);
+}
+
+// Editor
+::-moz-selection {
+  background: $themeColor;
+  color: #fff;
+  text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+  background: $themeColor;
+  color: #fff;
+  text-shadow: none;
+}
+
+#top-titlebar,
+#top-titlebar * {
+  color: map-get($display, light);
+}
+
+// Ymal
+
+#write pre.md-meta-block {
+  color: var(--text-color);
+  padding: 1em;
+  line-height: 1.6em;
+  background: var(--rawblock-edit-panel-bd);
+  border-radius: $border-radius;
+}
+
+// Code and code block
+
+code,
+kbd {
+  padding: 0.3rem;
+  margin-right: 0.4em;
+  color: map-get($textColor, light);
+  border-radius: $border-radius;
+  background-color: map-get($textColor, dark);
+}
+
+em {
+  font-style: normal;
+  border-bottom: 4px dotted $focusColor;
+}
+
+u {
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1rem;
+  text-decoration-color: $focusColor;
+}
+
+pre.md-fences {
+  padding: 10px 10px 10px 30px;
+  margin-bottom: 20px;
+  /* Just use for ubuntu*/
+  background-color: var(--rawblock-edit-panel-bd);
+}
+
+#ty-tooltip {
+  background-color: map-get($article, light);
+  color: var(--text-color);
+}
+
+// Todo list
+
+.task-list {
+  padding-left: 0;
+}
+
+.md-task-list-item input {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $themeColor;
+  }
+  &:checked:before,
+  [checked]:before {
+    background: linear-gradient($themeGradient);
+  }
+}
+
+// Sidebar
+#typora-sidebar {
+  box-shadow: none;
+  border-right: none;
+  background-color: var(--rawblock-edit-panel-bd);
+}
+
+.sidebar-tabs {
+  border-bottom: 0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+  border-left: 1px dashed;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+  color: $themeColor;
+}
+
+// Outline
+
+.outline-title-wrapper .btn {
+  color: inherit;
+}
+
+.outline-item:hover {
+  border-color: $themeColor;
+  background-color: $themeColor;
+  color: white;
+}
+
+// Bottom word count
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+  background: var(--rawblock-edit-panel-bd);
+}
+
+#toggle-sourceview-btn:hover {
+  color: var(--text-color);
+  background: var(--rawblock-edit-panel-bd);
+}
+
+// Focus mode
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
+  opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container) {
+  color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+  color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+  color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
+  color: #686868 !important;
+}
+
+// User config
+
+.megamenu-content,
+.megamenu-opened header {
+  background: map-get($article, light);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+  color: inherit;
+}
+
+.megamenu-menu-panel input[type="text"] {
+  background: inherit;
+  border: 0;
+  border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+  background: inherit;
+  border: 1px grey solid;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+  color: inherit;
+  font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+  background-color: $themeColor;
+}
+
+.megamenu-menu {
+  background-color: map-get($article, light);
+}
+
+#megamenu-menu-list > li > a {
+  border: none;
+  color: var(--text-color);
+}
+
+.megamenu-menu-header .megamenu-menu-header-title-menu,
+.megamenu-menu-header:focus .megamenu-menu-header-title-back,
+.megamenu-menu-header:hover .megamenu-menu-header-title-back {
+  display: block;
+  color: var(--text-color);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: white;
+  border: 1px solid #ddd;
+  background-color: inherit;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-footer {
+  border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+  background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+  background-color: $themeColor;
+}
+
+.megamenu-menu-panel .btn {
+  border: 1px solid #eee;
+  background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+  background-color: inherit;
+}
+
+// Diagrams
+
+#write .md-focus .md-diagram-panel {
+  border: 1px solid #ddd;
+  margin-left: -1px;
+  width: calc(100% + 2px);
+}
+
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+  margin-left: auto;
+}
+
+.md-diagram-panel-error {
+  color: tomato;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+  background: inherit;
+  color: var(--text-color);
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+  color: white;
+}
+
+#sidebar-files-menu {
+  border: solid 1px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+  background-color: var(--rawblock-edit-panel-bd);
+}
+
+.ty-preferences input[type="search"] {
+  border-color: $themeColor;
+  background: var(--rawblock-edit-panel-bd);
+  line-height: 22px;
+  border-radius: 6px;
+  color: var(--text-color);
+}
+
+.ty-preferences input[type="search"]:focus {
+  box-shadow: none;
+}
+
+.file-list-item {
+  border-bottom: none;
+}
+
+.file-list-item-summary {
+  opacity: 1;
+}
+
+.file-list-item.active:first-child {
+  border-top: none;
+}
+
+.file-node-background {
+  height: 32px;
+}
+
+.file-library-node.active > .file-node-content,
+.file-list-item.active {
+  color: $focusColor;
+}
+
+.file-library-node.active > .file-node-background {
+  background-color: var(--bg-color);
+  border-color: $themeColor;
+}
+
+.file-list-item.active {
+  background-color: #222222;
+  background-color: $themeColor;
+}
+
+.md-mathjax-midline {
+  background-color: #57616b;
+  border-bottom: none;
+}
+
+footer.ty-footer {
+  border-color: #656565;
+}
+
+// Preferences
+
+.ty-preferences .btn-default {
+  background: transparent;
+}
+
+.ty-preferences .btn-default:hover {
+  background: var(--rawblock-edit-panel-bd);
+}
+
+.ty-preferences select {
+  border: 1px solid #989698;
+  height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+  background: var(--item-hover-bg-color);
+}
+
+[data-is-directory="true"] .file-node-content {
+  margin-bottom: 0;
+}
+
+.file-node-title {
+  line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state,
+.html-for-mac .file-node-icon {
+  line-height: 26px;
+}
+
+// Code_style(light mode)
+
+.cm-s-inner.CodeMirror {
+  background-color: map-get($sidebar, light) !important;
+  border: none;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+  color: #404b53;
+  border: none;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: solid 2px $themeColor;
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+  color: #6d8a88;
+}
+
+.cm-s-inner span.cm-comment {
+  color: #7c7c7c;
+}
+
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+  color: #11c5b6;
+}
+
+.cm-s-inner span.cm-number {
+  color: #cd3f45;
+}
+
+.cm-s-inner span.cm-variable {
+  color: #55b5db;
+}
+
+.cm-s-inner span.cm-variable-2 {
+  color: #a074c4;
+}
+
+.cm-s-inner span.cm-def {
+  color: #55b5db;
+}
+
+.cm-s-inner span.cm-keyword {
+  color: #ff79c6;
+}
+
+.cm-s-inner span.cm-operator {
+  color: #9fca56;
+}
+
+.cm-s-inner span.cm-atom {
+  color: #cd3f45;
+}
+
+.cm-s-inner span.cm-meta {
+  color: #55b5db;
+}
+
+.cm-s-inner span.cm-tag {
+  color: #55b5db;
+}
+
+.cm-s-inner span.cm-attribute {
+  color: #f06fd7;
+}
+
+.cm-s-inner span.cm-qualifier {
+  color: #9fca56;
+}
+
+.cm-s-inner span.cm-property {
+  color: #a074c4;
+}
+
+.cm-s-inner span.cm-variable-3,
+.cm-s-inner span.cm-type {
+  color: #9fca56;
+}
+
+.cm-s-inner span.cm-builtin {
+  color: #9fca56;
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+// Print config
+
+@media print {
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    word-wrap: break-word;
+  }
+}
+
+// Dark mode
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: map-get($article, dark);
+    --select-text-bg-color: #666;
+    --text-color: map-get($textColor, light);
+    --primary-color: $themeColor;
+    --rawblock-edit-panel-bd: map-get($sidebar, dark);
+    --item-hover-bg-color: $themeColor;
+    --control-text-hover-color: $themeColor;
+  }
+
+  div#megamenu-section-open {
+    background-color: map-get($article, dark);
+  }
+
+  #megamenu-menu-sidebar {
+    background: map-get($sidebar, dark);
+  }
+
+  #top-titlebar,
+  #top-titlebar * {
+    color: map-get($display, dark);
+  }
+
+  code,
+  kbd {
+    padding: 0.3rem;
+    margin-right: 0.4em;
+    color: map-get($textColor, dark);
+    border-radius: $border-radius;
+    background-color: map-get($article, light);
+  }
+
+  /*  Code_style(dark mode) */
+
+  .cm-s-inner.CodeMirror {
+    background-color: map-get($sidebar, dark) !important;
+    border: none;
+  }
+
+  .cm-s-inner .CodeMirror-gutters {
+    color: #404b53;
+    border: none;
+  }
+
+  .CodeMirror div.CodeMirror-cursor {
+    border-left: solid 2px $themeColor;
+  }
+
+  .cm-s-inner .CodeMirror-line::selection,
+  .cm-s-inner .CodeMirror-line::-moz-selection,
+  .cm-s-inner .CodeMirror-line > span::selection,
+  .cm-s-inner .CodeMirror-line > span::-moz-selection,
+  .cm-s-inner .CodeMirror-line > span > span::selection,
+  .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  $code-linenumber-dark: #6d8a88;
+  $code-comment-dark: #7c7c7c;
+  $code-string-dark: #a8ff60;
+  $code-number-dark: #cd3f45;
+
+  .cm-s-inner .CodeMirror-linenumber { color: $code-linenumber-dark; }
+  .cm-s-inner span.cm-comment { color: $code-comment-dark; }
+  .cm-s-inner span.cm-string, .cm-s-inner span.cm-string-2 { color: $code-string-dark; }
+  .cm-s-inner span.cm-number { color: $code-number-dark; }
+
+
+  $code-variable-dark: #55b5db;
+  $code-variable-2-dark: #a074c4;
+  $code-def-dark: #55b5db;
+  $code-keyword-dark: #ff79c6;
+  $code-operator-dark: #9fca56;
+
+  .cm-s-inner span.cm-variable { color: $code-variable-dark; }
+  .cm-s-inner span.cm-variable-2 { color: $code-variable-2-dark; }
+  .cm-s-inner span.cm-def { color: $code-def-dark; }
+  .cm-s-inner span.cm-keyword { color: $code-keyword-dark; }
+  .cm-s-inner span.cm-operator { color: $code-operator-dark; }
+
+  $code-atom-dark: #cd3f45;
+  $code-meta-dark: #55b5db;
+  $code-tag-dark: #018df3;
+  $code-attribute-dark: #e91ad8;
+  $code-qualifier-dark: #9fca56;
+  $code-property-dark: #a074c4;
+  $code-type-dark: #9fca56;
+  $code-builtin-dark: #9fca56;
+
+  .cm-s-inner span.cm-atom { color: $code-atom-dark; }
+  .cm-s-inner span.cm-meta { color: $code-meta-dark; }
+  .cm-s-inner span.cm-tag { color: $code-tag-dark; }
+  .cm-s-inner span.cm-attribute { color: $code-attribute-dark; }
+  .cm-s-inner span.cm-qualifier { color: $code-qualifier-dark; }
+  .cm-s-inner span.cm-property { color: $code-property-dark; }
+  .cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: $code-type-dark; }
+  .cm-s-inner span.cm-builtin { color: $code-builtin-dark; }
+
+  .cm-s-inner .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+  }
+}
