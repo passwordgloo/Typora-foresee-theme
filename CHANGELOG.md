@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## 0.0.5.6(2025-07-26)
+
+Update the style file and optimize the UI components
+
+Refactor the style file and optimize the visual effects of titles, block references, and prompt boxes
+
+Add new color variables and gradient effects
+
+Update the introduction document
+
+Delete unnecessary files and organize the code structure
+
+## 0.0.5.5(2025-07-26)
+
+New glass effect style file (glass.css) and sample HTML file (tt.html) have been added
+
+Update multiple SVG icon files (alert.svg, caution.svg, info.svg, question.svg)
+
+New classic style files (classic.css, classic.scss)
+
+Add a Vercel project configuration file (.vercel/project.json)
+
 ## 0.0.5.4 (2025-07-12)
 
 ### Styles

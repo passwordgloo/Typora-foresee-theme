@@ -1,6 +1,6 @@
-# Typora foresee theme
+<h1 align="center">Typora foresee theme</h1>
 
-![](https://img.shields.io/badge/Author-passwordgloo-blueviolet?logo=github&amp;style=flat")&emsp;![](https://img.shields.io/github/last-commit/passwordgloo/typora-foresee-theme?logo=Git)&emsp;![](https://img.shields.io/badge/passwordgloo-7-white?logo=bilibili&logoColor=white&labelColor=FE7398&amp;style=flat)&emsp;![](https://img.shields.io/badge/麦田守望者-92-white?logo=zhihu&logoColor=white&labelColor=0084ff&amp;style=flat)&emsp;![](https://img.shields.io/badge/dynamic/json?color=white&label=%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3DneteaseMusic%26queryKey%3D1732207004&logo=data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQyNS4yIDQyNS4yIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPue9keaYk+S6kTwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzIwLjYsNDI1LjJIMTA1LjQyYy0xLjY5LS4yLTMuNC0uNDQtNS4wOS0uNjEtOC4xNy0uODctMTYuNDMtMS4xOS0yNC40OC0yLjY4QzUxLjQxLDQxNy40LDMxLjc3LDQwNSwxNy40NSwzODQuNTYsNy40NSwzNzAuMjksMi44NSwzNTQuMTUsMS4zMywzMzcsLjgxLDMzMS4yNi40NCwzMjUuNTEsMCwzMTkuNzdWMTA3LjA4Yy4yMi0yLjQxLjQzLTQuODIuNjctNy4yMi44My04LjE3LDEuMTYtMTYuNDMsMi41OS0yNC40OSw2LjQ1LTM2LjUyLDM0LjQ5LTY0LjY0LDcxLTcxLjkxQzg5LjQuNDYsMTA0LjcuMSwxMjAsLjA4LDE4NC44MiwwLDI0OS42MS0uMSwzMTQuNC4xN2ExODEuMTIsMTgxLjEyLDAsMCwxLDM0Ljc4LDNjMzYuOTUsNy4zOCw2MS4xOSwyOS4zMyw3MS41Nyw2NS44LDQsMTQuMTgsNC4zNSwyOC44OSw0LjM4LDQzLjUxcS4xNSwxMDAuMDgsMCwyMDAuMTdBMjQzLjU4LDI0My41OCwwLDAsMSw0MjIuNzgsMzQ2Yy0zLjksMjcuMjMtMTcuNjMsNDguNTEtNDAuOCw2My40Ny0xMy43OSw4LjktMjkuMjIsMTIuOTQtNDUuNCwxNC40MUMzMzEuMjIsNDI0LjM3LDMyNS44Nyw0MjQuNzcsMzIwLjYsNDI1LjJaTTI2Ni44NCwxNjQuNzZjMS42OC40MiwyLjY3LjYxLDMuNjIuOTFBNjQuMzgsNjQuMzgsMCwwLDEsMjk2LjA5LDE4MWMzMSwzMC4zNywzMi40Nyw4Mi4zOSwyLjUyLDExNS4xMy0yNy40MSwzMC02MS44NSw0MS41LTEwMS42OSwzNC40OS02OS40Mi0xMi4xOC0xMTAuMS04NS40NS04NC4xMS0xNTAuODksMTEuNTktMjkuMTcsMzIuNDMtNDkuNiw2MS4yNi02Miw5LTMuODYsMTIuODYtMTIuODQsOS4zNC0yMS4xNy0zLjYxLTguNTQtMTIuNzYtMTItMjEuODktOC4yMkExNDIuOTIsMTQyLjkyLDAsMCwwLDc2LjY5LDI1M0M5MSwzMTUsMTQ1Ljg3LDM2MS4xMywyMDkuMTgsMzY0LjE4YzM2LjE3LDEuNzQsNjktOC4zMiw5Ni44Mi0zMS4zOCwzOS41MS0zMi43MSw1NC44My03NC42MSw0MS43MS0xMjQuODEtOC4yNi0zMS42MS0yNy42NS01NS4yMi01Ny44OC02OWExMDIuNTIsMTAyLjUyLDAsMCwwLTI5LjU2LThjLTEtLjE0LTIuNjUtLjgxLTIuODUtMS41NGExOTMsMTkzLDAsMCwxLTQuODktMjAuMSwxNSwxNSwwLDAsMSw4LjMzLTE1LjksMTYsMTYsMCwwLDEsMTcuOSwyLjQ0YzEuNjEsMS40LDMsMyw0LjYyLDQuNDNhMTYsMTYsMCwwLDAsMjIuNTUtMS4zOC42OS42OSwwLDAsMCwuMTEtLjEzYzUuNTMtNi40Miw1LjM0LTE1LjE5LTEtMjIuMTRhNDksNDksMCwwLDAtNzUuNDgsMi44M2MtMTAsMTMuMTMtMTAuOTMsMjgtNyw0My40OS44MSwzLjIsMS42NSw2LjQsMi40NCw5LjM5YTcuMzcsNy4zNywwLDAsMS0uNjEuNWMtMS4yNy4zNi0yLjUzLjcyLTMuOCwxLTE4LjgyLDQuODgtMzUsMTQuMjUtNDcuMzMsMjkuMzYtMTkuMjksMjMuNTctMjUuNDUsNDkuOTMtMTQuMSw3OC44MiwxMi40OSwzMS43OSw0NS45Miw0Ny44Myw3Ny41LDM3Ljc4LDI4LjA4LTguOTQsNDQuNzMtMzUuMzQsNDIuMTEtNjUuMjItLjgzLTkuNjEtMy42Ni0xOS4wOC01LjkyLTI4LjUzQzI3MS4xNiwxNzkuMTUsMjY5LDE3Mi4zMSwyNjYuODQsMTY0Ljc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE4NS42OCwyMTEuNTJjMS0xNy44MywxMS44NS0zMi40OSwzMC4xNS00MS45Miw0LjcyLTIuNDQsMTAuMS0zLjU2LDE1LjE1LTUuMzQsMS43NC0uNjEsMi41Mi0uMTYsMywxLjY4LDMuOTMsMTQuMzcsOC4wOSwyOC42OCwxMS44OCw0My4xMWEzNy4zOSwzNy4zOSwwLDAsMS0uNzYsMjMuMDhjLTcuMzgsMTkuNzctMzIuNDMsMjUuMjUtNDcuODUsMTAuNDdDMTg5LjM0LDIzNSwxODUuNiwyMjUuNjcsMTg1LjY4LDIxMS41MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48L3N2Zz4=&labelColor=d62f2e)
+![](https://img.shields.io/badge/Author-passwordgloo-blueviolet?logo=github&amp;style=flat)&emsp;![](https://img.shields.io/badge/Version-0.0.5.6-orange?logo=markdown&amp;style=flat)&emsp;![](https://img.shields.io/github/last-commit/passwordgloo/typora-foresee-theme?logo=Git)&emsp;![](https://img.shields.io/badge/passwordgloo-7-white?logo=bilibili&logoColor=white&labelColor=FE7398&amp;style=flat)&emsp;![](https://img.shields.io/badge/麦田守望者-92-white?logo=zhihu&logoColor=white&labelColor=0084ff&amp;style=flat)&emsp;![](https://img.shields.io/badge/dynamic/json?color=white&label=%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3DneteaseMusic%26queryKey%3D1732207004&logo=data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQyNS4yIDQyNS4yIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPue9keaYk+S6kTwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzIwLjYsNDI1LjJIMTA1LjQyYy0xLjY5LS4yLTMuNC0uNDQtNS4wOS0uNjEtOC4xNy0uODctMTYuNDMtMS4xOS0yNC40OC0yLjY4QzUxLjQxLDQxNy40LDMxLjc3LDQwNSwxNy40NSwzODQuNTYsNy40NSwzNzAuMjksMi44NSwzNTQuMTUsMS4zMywzMzcsLjgxLDMzMS4yNi40NCwzMjUuNTEsMCwzMTkuNzdWMTA3LjA4Yy4yMi0yLjQxLjQzLTQuODIuNjctNy4yMi44My04LjE3LDEuMTYtMTYuNDMsMi41OS0yNC40OSw2LjQ1LTM2LjUyLDM0LjQ5LTY0LjY0LDcxLTcxLjkxQzg5LjQuNDYsMTA0LjcuMSwxMjAsLjA4LDE4NC44MiwwLDI0OS42MS0uMSwzMTQuNC4xN2ExODEuMTIsMTgxLjEyLDAsMCwxLDM0Ljc4LDNjMzYuOTUsNy4zOCw2MS4xOSwyOS4zMyw3MS41Nyw2NS44LDQsMTQuMTgsNC4zNSwyOC44OSw0LjM4LDQzLjUxcS4xNSwxMDAuMDgsMCwyMDAuMTdBMjQzLjU4LDI0My41OCwwLDAsMSw0MjIuNzgsMzQ2Yy0zLjksMjcuMjMtMTcuNjMsNDguNTEtNDAuOCw2My40Ny0xMy43OSw4LjktMjkuMjIsMTIuOTQtNDUuNCwxNC40MUMzMzEuMjIsNDI0LjM3LDMyNS44Nyw0MjQuNzcsMzIwLjYsNDI1LjJaTTI2Ni44NCwxNjQuNzZjMS42OC40MiwyLjY3LjYxLDMuNjIuOTFBNjQuMzgsNjQuMzgsMCwwLDEsMjk2LjA5LDE4MWMzMSwzMC4zNywzMi40Nyw4Mi4zOSwyLjUyLDExNS4xMy0yNy40MSwzMC02MS44NSw0MS41LTEwMS42OSwzNC40OS02OS40Mi0xMi4xOC0xMTAuMS04NS40NS04NC4xMS0xNTAuODksMTEuNTktMjkuMTcsMzIuNDMtNDkuNiw2MS4yNi02Miw5LTMuODYsMTIuODYtMTIuODQsOS4zNC0yMS4xNy0zLjYxLTguNTQtMTIuNzYtMTItMjEuODktOC4yMkExNDIuOTIsMTQyLjkyLDAsMCwwLDc2LjY5LDI1M0M5MSwzMTUsMTQ1Ljg3LDM2MS4xMywyMDkuMTgsMzY0LjE4YzM2LjE3LDEuNzQsNjktOC4zMiw5Ni44Mi0zMS4zOCwzOS41MS0zMi43MSw1NC44My03NC42MSw0MS43MS0xMjQuODEtOC4yNi0zMS42MS0yNy42NS01NS4yMi01Ny44OC02OWExMDIuNTIsMTAyLjUyLDAsMCwwLTI5LjU2LThjLTEtLjE0LTIuNjUtLjgxLTIuODUtMS41NGExOTMsMTkzLDAsMCwxLTQuODktMjAuMSwxNSwxNSwwLDAsMSw4LjMzLTE1LjksMTYsMTYsMCwwLDEsMTcuOSwyLjQ0YzEuNjEsMS40LDMsMyw0LjYyLDQuNDNhMTYsMTYsMCwwLDAsMjIuNTUtMS4zOC42OS42OSwwLDAsMCwuMTEtLjEzYzUuNTMtNi40Miw1LjM0LTE1LjE5LTEtMjIuMTRhNDksNDksMCwwLDAtNzUuNDgsMi44M2MtMTAsMTMuMTMtMTAuOTMsMjgtNyw0My40OS44MSwzLjIsMS42NSw2LjQsMi40NCw5LjM5YTcuMzcsNy4zNywwLDAsMS0uNjEuNWMtMS4yNy4zNi0yLjUzLjcyLTMuOCwxLTE4LjgyLDQuODgtMzUsMTQuMjUtNDcuMzMsMjkuMzYtMTkuMjksMjMuNTctMjUuNDUsNDkuOTMtMTQuMSw3OC44MiwxMi40OSwzMS43OSw0NS45Miw0Ny44Myw3Ny41LDM3Ljc4LDI4LjA4LTguOTQsNDQuNzMtMzUuMzQsNDIuMTEtNjUuMjItLjgzLTkuNjEtMy42Ni0xOS4wOC01LjkyLTI4LjUzQzI3MS4xNiwxNzkuMTUsMjY5LDE3Mi4zMSwyNjYuODQsMTY0Ljc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE4NS42OCwyMTEuNTJjMS0xNy44MywxMS44NS0zMi40OSwzMC4xNS00MS45Miw0LjcyLTIuNDQsMTAuMS0zLjU2LDE1LjE1LTUuMzQsMS43NC0uNjEsMi41Mi0uMTYsMywxLjY4LDMuOTMsMTQuMzcsOC4wOSwyOC42OCwxMS44OCw0My4xMWEzNy4zOSwzNy4zOSwwLDAsMS0uNzYsMjMuMDhjLTcuMzgsMTkuNzctMzIuNDMsMjUuMjUtNDcuODUsMTAuNDdDMTg5LjM0LDIzNSwxODUuNiwyMjUuNjcsMTg1LjY4LDIxMS41MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48L3N2Zz4=&labelColor=d62f2e)
 
 <p align="center"><a href="https://github.com/passwordgloo/Typora-foresee-theme/blob/study/ReadmeCN.md">Readme</a>&nbsp;|&nbsp;<a href="https://github.com/passwordgloo/Typora-foresee-theme/blob/study/CHANGELOG_CN.md">CHANGELOG</a>&nbsp;|&nbsp;<a href="https://github.com/passwordgloo/Typora-foresee-theme/blob/study/LICENSE">LICENSE</a></p>
 
@@ -10,20 +10,20 @@
 
 ## 感谢
 
-基于默认主题`night`修改
+基于默认主题 `night` 修改
 
 选中样式受 [typora-dyzj-theme](https://github.com/muggledy/typora-dyzj-theme) 启发
 
 ## 如何使用
 
 1. 克隆仓库,或者[下载压缩包](https://github.com/passwordgloo/Typora-foresee-theme/archive/refs/heads/study.zip)
-2. Typora依次打开设置>外观>主题，点击按钮`打开主题文件夹`
+2. Typora依次打开设置>外观>主题，点击按钮 `打开主题文件夹`
 3. 复制粘贴到Typora主题文件夹
 
 ## 特点
 
 - 根据系统外观设置自动切换主题模式
-- 用户自定义颜色配置
+- 多种风格任选，用户自定义颜色配置
 - 模块化设计思路
 - 使用 `scss` 格式替代原先的 `css`
 
@@ -33,6 +33,8 @@
 
 >[!note]
 >使用渐变风格方块修饰
+
+![截屏2025 07 27 09.39.10](https://img.picgo.net/2025/07/27/2025-07-27-09.39.10f95ad407fbd7ba1f.png)
 
 ### 代码样式
 
@@ -70,6 +72,10 @@ kbd元素样式如下
 ![截屏2024 07 24 21.25.23](https://img.picgo.net/2024/07/24/2024-07-24-21.25.2306902135529210e2.png)
 
 2. 引用块样式支持渐变色
+
+> [!warning]
+>
+> 仅限gradient 样式
 
 ```html
 <blockquote alt = 'green'>green</blockquote>
@@ -109,16 +115,22 @@ kbd元素样式如下
 
 4. 引用块样式随标题不同而不同
 
-![PixPin 2024 08 18 17 40 31](https://img.picgo.net/2024/12/05/PixPin_2024-12-05_23-15-55b281fe1bddd5b4fa.gif)
+![PixPin 2025 07 27 10 01 41](https://img.picgo.net/2025/07/27/PixPin_2025-07-27_10-01-41757ca0a5b84fad3c.gif)
 
 ### 标题
 
 >[!note]
 >重新调整标题样式，添加专注模式下样式
 
-![PixPin 2024 08 18 17 23 46](https://img.picgo.net/2024/12/05/PixPin_2024-12-05_23-14-37911c453bcb1f3592.gif)
+![PixPin 2025 07 27 10 12 21](https://img.picgo.net/2025/07/27/PixPin_2025-07-27_10-12-21e2176109d4be271d.gif)
+
+![PixPin 2025 07 27 10 48 17](https://img.picgo.net/2025/07/27/PixPin_2025-07-27_10-48-17339ea527282addc7.gif)
 
 ### 图标
+
+> [!warning]
+>
+> 仅限gradient 样式
 
 ```html
 <section alt="note">note text</section>
@@ -133,14 +145,22 @@ kbd元素样式如下
 
 ### 徽章
 
-![PixPin 2024 08 18 17 19 26](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)
+```html
+<span alt="black">black</span>
+<span alt="blue">blue</span>
+<span alt="green">orange</span>
+<span alt="purple">purple</span>
+<span alt="red">red</span>
+```
+
+![截屏2025 07 27 10.47.21](https://img.picgo.net/2025/07/27/2025-07-27-10.47.212f2535ab49083f01.png)
 
 
 ## 待办
 
-- [ ] 添加更多动画效果
+- [x] 添加更多动画效果
 - [ ] 添加pdf导出样式
-- [ ] 区分深色和浅色模式下引用块样式
+- [x] 区分深色和浅色模式下引用块样式
 
 ## 教程
 
@@ -149,8 +169,8 @@ kbd元素样式如下
 ## 个性化[可选]
 
 >[!warning]
->根目录下的foresee-XXX.css默认为压缩格式;
->请在文件夹`foresee`里修改`foresee.scss`文件代码以获得个性化体验
+>根目录下css文件默认为压缩格式;
+>请在文件夹`foresee`里修改 `scss`文件代码以获得个性化体验
 
 ```scss
 $display: (
@@ -241,13 +261,17 @@ $font-family: "Microsoft YaHei", "PingFang SC", "Arial", "sans-serif";
 
 ## 预览
 
-### 浅色模式
+### Gradient style
 
-![light en](https://img.picgo.net/2024/05/03/light_ena9da10e94d5a2ae9.png)
+![PixPin 2025 07 27 10 52 36](https://img.picgo.net/2025/07/27/PixPin_2025-07-27_10-52-363ee5d6d5a62256b7.png)
 
-### 深色模式
+### Classic Style
 
-![dark en](https://img.picgo.net/2024/05/03/dark_en60fbd4000b16c900.png)
+![PixPin 2025 07 27 10 56 39](https://img.picgo.net/2025/07/27/PixPin_2025-07-27_10-56-391f2a8ce01f86cfd7.png)
+
+### Glass Style
+
+![PixPin 2025 07 27 10 55 10](https://img.picgo.net/2025/07/27/PixPin_2025-07-27_10-55-10a148131de8c0ba99.png)
 
 ## 项目用途
 

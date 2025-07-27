@@ -1,5 +1,27 @@
 # 更新日志
 
+## 0.0.5.6(2025-07-26)
+
+更新样式文件和优化UI组件
+
+重构样式文件，优化标题、块引用和提示框的视觉效果
+
+添加新的颜色变量和渐变效果
+
+更新介绍文档
+
+删除无用文件并整理代码结构
+
+## 0.0.5.5(2025-07-26)
+
+新增玻璃效果样式文件(glass.css)及示例HTML文件(tt.html)
+
+更新多个SVG图标文件(alert.svg, caution.svg, info.svg, question.svg)
+
+新增经典样式文件(classic.css, classic.scss)
+
+新增Vercel项目配置文件(.vercel/project.json)
+
 ## 0.0.5.4 (2025-07-12)
 
 ### Styles
