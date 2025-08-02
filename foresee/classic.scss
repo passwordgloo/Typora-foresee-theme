@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.6
+version:0.0.5.7
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -187,12 +187,12 @@ h2 {
     line-height: 1.2;
     padding-left: .5em;
     font-family: $font-family;
-    border-left: thick solid $themeColor;
+    border-left: 6px solid $themeColor;
     border-radius: 4px;
 }
 
 #write>h2.md-focus {
-    border-left-color: var(--focus-color);
+    border-left-color: $focusColor;
 }
 
 h3 {
@@ -233,8 +233,8 @@ sup.md-footnote {
 }
 
 p {
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 // Badge
@@ -246,34 +246,22 @@ p {
   border-radius: $border-radius;
 }
 
-span[alt="black"] {
-  @include badge-common();
-  background-color: #000;
-}
+// 定义徽章颜色映射
+$badge-colors: (
+  'black': #000,
+  'blue': $blue,
+  'orange': $orange,
+  'purple': $purple,
+  'green': $green,
+  'red': $red
+);
 
-span[alt="blue"] {
-  @include badge-common();
-  background-color: $blue;
-}
-
-span[alt="orange"] {
-  @include badge-common();
-  background-color: $orange;
-}
-
-span[alt="purple"] {
-  @include badge-common();
-  background-color: $purple;
-}
-
-span[alt="green"] {
-  @include badge-common();
-  background-color: $green;
-}
-
-span[alt="red"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $tomato-gradient);
+// 使用@each循环生成徽章样式
+@each $name, $color in $badge-colors {
+  span[alt="#{$name}"] {
+    @include badge-common();
+    background-color: $color;
+  }
 }
 
 blockquote {
@@ -282,18 +270,10 @@ blockquote {
     line-height: inherit;
     min-height: 20px;
     margin: 1em 0;
-    border-left: solid $themeColor;
+    border-left: 4px solid $themeColor;
     text-indent: 0em;
     color: $themeColor;
     overflow: hidden;
-}
-
-blockquote img {
-    position: relative;
-    transform: translateX(-80px);
-    filter: drop-shadow($themeColor 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
 }
 
 h2+blockquote,blockquote[alt="green"] {
@@ -302,12 +282,21 @@ h2+blockquote,blockquote[alt="green"] {
 }
 
 /* change svg color */
+
+@mixin blockquote-img($color){
+  position: relative;
+  transform: translateX(-80px);
+  height: 1rem;
+  filter: drop-shadow($color 80px 0);
+  margin-right: .2rem;
+}
+
+blockquote img {
+  @include blockquote-img($themeColor)
+}
+
 h2+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
-    filter: drop-shadow($green 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
+  @include blockquote-img(green)
 }
 
 h3+blockquote,blockquote[alt="blue"] {
@@ -316,11 +305,7 @@ h3+blockquote,blockquote[alt="blue"] {
 }
 
 h3+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
-    filter: drop-shadow($blue 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
+  @include blockquote-img(blue)
 }
 
 h4+blockquote,blockquote[alt="orange"]{
@@ -329,49 +314,49 @@ h4+blockquote,blockquote[alt="orange"]{
 }
 
 h4+blockquote img {
-    position: relative;
-    transform: translateX(-80px);
-    filter: drop-shadow($orange 80px 0);
-    height: 1rem;
-    margin-right: .2rem;
+  @include blockquote-img(orange)
+}
+
+blockquote[alt="purple"]{
+    border-left-color: $purple;
+    color: $purple;
 }
 
 @mixin bar {
   padding: 4px 10px;
   border-radius: $border-radius;
   align-items: center;
-  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-left: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .md-alert.md-alert-note {
   @include bar();
   color: map-get($article, dark);
-  border:2px map-get($article, dark) double;
+  border:2px map-get($article, dark) solid;
 }
 
 .md-alert.md-alert-caution {
   @include bar();
   color:$tomato;
-  border:2px double $tomato;
+  border:2px solid $tomato;
 }
 
 .md-alert.md-alert-tip {
   @include bar();
   color:$green;
-  border:2px double $green;
+  border:2px solid $green;
 }
 
 .md-alert.md-alert-important {
   @include bar();
   color:$purple;
-  border:2px double $purple;
+  border:2px solid $purple;
 }
 
 .md-alert.md-alert-warning {
   @include bar();
   color:$orange;
-  border:2px double $orange;
+  border:2px solid $orange;
 }
 
 p,
@@ -972,7 +957,7 @@ footer.ty-footer {
       line-height: inherit;
       min-height: 20px;
       margin: 1em 0;
-      border-left: solid $themeColor;
+      border-left: 4px solid $themeColor;
       text-indent: 0em;
       color: $themeColor;
       overflow: hidden;

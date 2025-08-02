@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 0.0.5.7(2025-08-02)
+
+### feat
+- :file_text: Add the test files foresee/test/test.md and test.html
+- :wastebasket: Remove the.vercel/project.json file
+- :shield: Added in.gitignore. DS_Store ignore the rule
+
+### doc
+- :memo: Update the README document to showcase new features
+
+### style
+- :package: Update the version numbers of gradient.scss, glass.scss and classic.scss to 0.0.5.7
+- :lipstick: Optimize the style of the bar component by adding variants with ICONS
+- :wrench: Simplify badge style definitions using @each loops
+
 ## 0.0.5.6(2025-07-26)
 
 Update the style file and optimize the UI components

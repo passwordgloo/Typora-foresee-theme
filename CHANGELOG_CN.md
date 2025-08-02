@@ -1,5 +1,20 @@
 # 更新日志
 
+## 0.0.5.7(2025-08-02)
+
+### feat
+- :file_text: 添加foresee/test/test.md和test.html测试文件
+- :wastebasket: 移除.vercel/project.json文件
+- :shield: 在.gitignore中添加.DS_Store忽略规则
+
+### doc
+- :memo: 更新README文档展示新功能
+
+### style
+- :package: 更新gradient.scss、glass.scss和classic.scss版本号至0.0.5.7
+- :lipstick: 优化bar组件样式，增加带图标的变体
+- :wrench: 使用@each循环简化徽章样式定义
+
 ## 0.0.5.6(2025-07-26)
 
 更新样式文件和优化UI组件

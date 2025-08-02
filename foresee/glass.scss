@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.6
+version:0.0.5.7
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -30,6 +30,8 @@ $textColor: (
   dark: #323232
 );
 
+// glass颜色
+
 $maclong: (
   light: (
     black: #e0e0e0,
@@ -49,6 +51,8 @@ $maclong: (
     tomato: rgba(197, 43, 74, 0.3)
   )
 );
+
+$black:#292929;
 
 $tomato: #ff6347;
 
@@ -185,7 +189,6 @@ body {
 @mixin title-common {
   margin: 0 0 0.5rem 0;
   cursor: text;
-  color: transparent;
   font-family: $font-family;
   -webkit-background-clip: text;
   background-clip: text;
@@ -287,11 +290,12 @@ a {
 
 // Badge
 
-@mixin badge-common {
+@mixin badge-light($color) {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.7);
+  background-color: map-get(map-get($maclong, light), $color);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -304,29 +308,13 @@ a {
   transition: all 0.2s ease;
 }
 
-span[alt="black"] {
-  @include badge-common();
-  background-color: map-get(map-get($maclong, light), black);
-}
+// 使用@each循环简化徽章样式
+$badge-colors: black, blue, orange, purple, green, red;
 
-span[alt="blue"] {
-  @include badge-common();
-  background-color: map-get(map-get($maclong, light), blue);
-}
-
-span[alt="orange"] {
-  @include badge-common();
-  background-color: map-get(map-get($maclong, light), orange);
-}
-
-span[alt="purple"] {
-  @include badge-common();
-  background-color: map-get(map-get($maclong, light), purple);
-}
-
-span[alt="green"] {
-  @include badge-common();
-  background-color: map-get(map-get($maclong, light), green);
+@each $color in $badge-colors {
+  span[alt="#{$color}"] {
+    @include badge-light($color);
+  }
 }
 
 p,
@@ -392,32 +380,25 @@ li::marker {
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
 }
 
-h2 + blockquote,
-blockquote[alt="green"] {
+// 简化blockquote样式定义
+h2 + blockquote, blockquote[alt='green'] {
   color: $green;
 }
-
-h3 + blockquote,
-blockquote[alt="blue"] {
+h3 + blockquote, blockquote[alt='blue'] {
   color: $blue;
 }
-
-h4 + blockquote,
-blockquote[alt="orange"] {
+h4 + blockquote, blockquote[alt='orange'] {
   color: $orange;
 }
-
-h5 + blockquote,
-blockquote[alt="purple"] {
+h5 + blockquote, blockquote[alt='purple'] {
   color: $purple;
 }
-
-blockquote[alt="red"] {
+blockquote[alt='red'] {
   color: $red;
 }
 
-.md-alert-text-container::after {
-  color: white;
+blockquote[alt='tomato'] {
+  color: $tomato;
 }
 
 // .md-alert-text-note,
@@ -459,6 +440,11 @@ blockquote[alt="purple"],
 .md-alert.md-alert-important {
   // background: rgba(180, 81, 238, 0.415);
   background-color: map-get(map-get($maclong, light), purple);
+  @extend %gfm_light;
+}
+
+blockquote[alt="tomato"]{
+  background-color: map-get(map-get($maclong, light), tomato);
   @extend %gfm_light;
 }
 
@@ -1034,26 +1020,11 @@ footer.ty-footer {
     transition: all 0.2s ease;
   }
 
-  span[alt="black"] {
-    @include badge-dark(black);
+@each $color in $badge-colors {
+  span[alt="#{$color}"] {
+    @include badge-dark($color);
   }
-
-  span[alt="blue"] {
-    @include badge-dark(blue);
-  }
-
-  span[alt="orange"] {
-    @include badge-dark(orange);
-  }
-
-  span[alt="purple"] {
-    @include badge-dark(purple);
-  }
-
-  span[alt="green"] {
-    @include badge-dark(green);
-  }
-
+}
   // Use for blockquote(Github style)
 
   %gfm_dark {

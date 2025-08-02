@@ -1,7 +1,7 @@
 # pnpm environment
 package.json
 pnpm-lock.yaml
-
+*.DS_Store
 # node
 node_modules
 

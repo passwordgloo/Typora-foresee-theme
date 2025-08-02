@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.6
+version:0.0.5.7
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -509,7 +509,7 @@ blockquote[alt="red"] {
 }
 
 %bar_icon {
-  margin-left: -2rem;
+  margin-left: -1.5rem;
   margin-right: 1rem;
   text-align: center;
   width: 1.5rem;
@@ -555,67 +555,80 @@ blockquote[alt="red"] {
   background: linear-gradient(to right, $orange-gradient);
 }
 
-section[alt="note"] {
+
+section[alt="note"],section[alt="note-icon"]{
   @extend %bar;
   background: linear-gradient(to right, $black-gradient);
+}
 
+section[alt="info"],section[alt="info-icon"]{
+  @extend %bar;
+  background: linear-gradient(to right, $blue-gradient);
+}
+
+section[alt="tip"],section[alt="tip-icon"]{
+  @extend %bar;
+  background: linear-gradient(to right, $green-gradient);
+}
+
+section[alt="warning"],section[alt="warning-icon"]{
+  @extend %bar;
+  background: linear-gradient(to right, $orange-gradient);
+}
+
+section[alt="caution"],section[alt="caution-icon"]{
+  @extend %bar;
+  background: linear-gradient(to right, $tomato-gradient);
+}
+
+section[alt="important"],section[alt="important-icon"]{
+  @extend %bar;
+  background: linear-gradient(to right, $purple-gradient);
+}
+
+section[alt="note-icon"] {
   &::before {
-    content: url("./icon/info.svg");
+    content: url("./foresee/icon/info.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $black-gradient);
   }
 }
 
-section[alt="info"] {
-  @extend %bar;
-  background: linear-gradient(to right, $blue-gradient);
-
+section[alt="info-icon"] {
   &::before {
-    content: url("./icon/correct.svg");
+    content: url("./foresee/icon/correct.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $blue-gradient);
   }
 }
 
-section[alt="tip"] {
-  @extend %bar;
-  background: linear-gradient(to right, $green-gradient);
-
+section[alt="tip-icon"] {
   &::before {
-    content: url("./icon/question.svg");
+    content: url("./foresee/icon/question.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $green-gradient);
   }
 }
 
-section[alt="warning"] {
-  @extend %bar;
-  background: linear-gradient(to right, $orange-gradient);
-
+section[alt="warning-icon"] {
   &::before {
-    content: url("./icon/alert.svg");
+    content: url("./foresee/icon/alert.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $orange-gradient);
   }
 }
 
-section[alt="caution"] {
-  @extend %bar;
-  background: linear-gradient(to right, $tomato-gradient);
-
+section[alt="caution-icon"] {
   &::before {
-    content: url("./icon/caution.svg");
+    content: url("./foresee/icon/caution.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $tomato-gradient);
   }
 }
 
-section[alt="important"] {
-  @extend %bar;
-  background: linear-gradient(to right, $purple-gradient);
-
+section[alt="important-icon"] {
   &::before {
-    content: url("./icon/alert.svg");
+    content: url("./foresee/icon/alert.svg");
     @extend %bar_icon;
     background: linear-gradient(to right, $purple-gradient);
   }
