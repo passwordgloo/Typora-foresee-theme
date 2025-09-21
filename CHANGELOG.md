@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.0.5.7(2025-09-21)
+
+Readme: Update image link
+
 ## 0.0.5.7(2025-08-02)
 
 ### feat
@@ -51,8 +55,7 @@ Add a Vercel project configuration file (.vercel/project.json)
 
 ### Styles
 
-* **theme:** :lipstick: Removed the 20px icon
-（[cb60a1](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/cb60a1cb41628ad026d17aabea5634c3958cbfb0)）
+* **theme:** :lipstick: Removed the 20px icon（[cb60a1](https://gitee.com/passwordgloo/Typora-foresee-theme/commits/cb60a1cb41628ad026d17aabea5634c3958cbfb0)）
 
 ## 0.0.5.2 (2025-03-19)
 
@@ -120,9 +123,9 @@ Style: Gradient color blocks are richer
 
 ### Preview
 
-![](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_10-52-467f14386bb44c147e.webp)
+![PixPin 2024 10 07 10 52d4e14471431780c4](https://origin.picgo.net/2025/09/21/PixPin_2024-10-07_10-52d4e14471431780c4c2ebc19b2f73364e.png)
 
-![](https://img.picgo.net/2024/10/07/PixPin_2024-10-07_11-06-58b1385e0e76a87061.webp)
+![PixPin 2024 10 07 11 066d7ce5c39f4222b9](https://origin.picgo.net/2025/09/21/PixPin_2024-10-07_11-066d7ce5c39f4222b9e63ad5542d88ea1a.png)
 
 ## 0.0.4.1(2024-10-06)
 
@@ -162,11 +165,9 @@ Readme: Demonstrate theme styles using Mac style
 
 ### Preview
 
-![](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-20-320212612d5f2cd57c.png)
+![PixPin 2024 08 18 17 20 320212612d5f2cd57c](https://origin.picgo.net/2025/09/21/PixPin_2024-08-18_17-20-320212612d5f2cd57c11ba4294663e1f58.png)
 
-![](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-17-044fd017cfb6a0a347.png)
-
-![](https://img.picgo.net/2024/08/18/PixPin_2024-08-18_17-19-26d719e5755cc35953.png)
+![PixPin 2024 08 18 17 17 044fd017cfb6a0a347](https://origin.picgo.net/2025/09/21/PixPin_2024-08-18_17-17-044fd017cfb6a0a347d86c41910fab9547.png)
 
 ## 0.0.3.6(2024-08-18)
 
