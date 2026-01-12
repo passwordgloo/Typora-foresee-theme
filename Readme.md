@@ -43,7 +43,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 <section alt="important">important text</section>
 ```
 
-![2025 08 02 11.51.24de389e826e079b8d](https://origin.picgo.net/2025/09/21/2025-08-02-11.51.24de389e826e079b8df9f0a0a886f6de35.png)
+![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.51.19.png)
 
 > [!tip]
 >
@@ -59,7 +59,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 <section alt="important-icon">important-icon text</section>
 ```
 
-![2025 08 02 11.52.23042330592300b6cf](https://origin.picgo.net/2025/09/21/2025-08-02-11.52.23042330592300b6cf8034f7739dd8bf5c.png)
+![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.51.36.png)
 
 ### Todo list
 
@@ -118,7 +118,7 @@ You can type `>` to insert blockquote by default
 <blockquote alt = 'red'>red</blockquote>
 ```
 
-![2024 12 05 23.25.517d5d3904c12445ac](https://origin.picgo.net/2025/09/21/2024-12-05-23.25.517d5d3904c12445ac4a4bd6139f62d86f.png)
+![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.50.16.png)
 
 3. Github blockquote style
 
@@ -144,7 +144,7 @@ You can type `>` to insert blockquote by default
 > Important text
 ```
 
-![2024 12 05 23.20.19eaddd2d09531df4b](https://origin.picgo.net/2025/09/21/2024-12-05-23.20.19eaddd2d09531df4b250a63967ffc55a2.png)
+![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.50.47.png)
 
 4. Blockquote style can change its color when it close to heading
 
@@ -161,7 +161,7 @@ You can type `>` to insert blockquote by default
 
 ### Badge
 
-![2025 07 27 10.47.212f2535ab49083f01](https://origin.picgo.net/2025/09/21/2025-07-27-10.47.212f2535ab49083f014e103d1ea26d662d.png)
+![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.51.07.png)
 
 ## Todo
 
