@@ -43,7 +43,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 <section alt="important">important text</section>
 ```
 
-![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.51.19.png)
+![](./foresee/img/2026-01-1222.51.19.avif) 
 
 > [!tip]
 >
@@ -59,14 +59,15 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 <section alt="important-icon">important-icon text</section>
 ```
 
-![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.51.36.png)
+![](./foresee/img/2026-01-12 22.51.36.avif) 
 
 ### Todo list
 
->[!note]
->use gradient style
+> [!note]
+>
+> Use gradient-style blocks for decoration
 
-![2025 07 27 09.39.10f95ad407fbd7ba1f](https://origin.picgo.net/2025/09/21/2025-07-27-09.39.10f95ad407fbd7ba1fe9f2b531f82f26bf.png)
+![](./foresee/img/2026-01-13 17.54.53.avif) 
 
 ### Code Style
 
@@ -77,24 +78,28 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 
 inline code like this
 
-![PixPin 2024 10 07 10 52d4e14471431780c4](https://origin.picgo.net/2025/09/21/PixPin_2024-10-07_10-52d4e14471431780c4c2ebc19b2f73364e.png)
+![](./foresee/img/2026-01-1322.01.15.avif) 
 
 `kbd` element like this
 
-![PixPin 2024 10 07 11 066d7ce5c39f4222b9](https://origin.picgo.net/2025/09/21/PixPin_2024-10-07_11-066d7ce5c39f4222b9e63ad5542d88ea1a.png)
+![](foresee/img/2026-01-1322.02.07.avif) 
+
+#### Code fences
 
 >[!important]
 > Please go to Preferences>Markdown> to turn on `displaying line numbers` for a better experience
 
+![](./foresee/img/2026-01-1318.09.49.avif) 
+
 1. Support custom cursor color
 
-![PixPin 2024 08 18 00 01 001bbf1d3c1f79dab1c31037217208932b](https://origin.picgo.net/2025/09/21/PixPin_2024-08-18_00-01-001bbf1d3c1f79dab1c31037217208932b5b3e235a12c577cc.gif)
+![](./foresee/img/3dfdf0751fd41706.avif) 
 
 2. Different code style based on the appearance of the system
 
-![PixPin 2024 08 18 17 20 320212612d5f2cd57c](https://origin.picgo.net/2025/09/21/PixPin_2024-08-18_17-20-320212612d5f2cd57c51b64967e582fe11.png)
+![](./foresee/img/2026-01-1318.15.12.avif) 
 
-![PixPin 2024 08 18 17 20 09e3d823ee3bc3f30f](https://origin.picgo.net/2025/09/21/PixPin_2024-08-18_17-20-09e3d823ee3bc3f30f4c544ab3dea15d95.png)
+![](./foresee/img/2026-01-1318.15.40.avif) 
 
 ### Blockquote
 
@@ -102,7 +107,7 @@ inline code like this
 
 You can type `>` to insert blockquote by default
 
-![2024 07 24 21.25.2306902135529210e2](https://origin.picgo.net/2025/09/21/2024-07-24-21.25.2306902135529210e22e349302e9552cca.png)
+![](./foresee/img/2026-01-13 18.19.23.avif) 
 
 2. Blockquote style supports linear-gradient
 
@@ -118,9 +123,13 @@ You can type `>` to insert blockquote by default
 <blockquote alt = 'red'>red</blockquote>
 ```
 
-![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.50.16.png)
+![](./foresee/img/2026-01-1222.50.16.avif) 
 
-3. Github blockquote style
+3. Blockquote style can change its color when it close to heading
+
+![](./foresee/img/16762545afad1dcb.avif) 
+
+4. Github blockquote style
 
 ```markdown
 > [!note]
@@ -144,29 +153,47 @@ You can type `>` to insert blockquote by default
 > Important text
 ```
 
-![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.50.47.png)
-
-4. Blockquote style can change its color when it close to heading
-
-![PixPin 2025 07 27 10 01 41757ca0a5b84fad3c](https://origin.picgo.net/2025/09/21/PixPin_2025-07-27_10-01-41757ca0a5b84fad3c9f84d2b5e43380cf.gif)
+![](./foresee/img/2026-01-12222.50.47.avif) 
 
 ### Title
 
 >[!note]
 >Redesign header style and its focus mode
 
-![PixPin 2025 07 27 10 12 21e2176109d4be271d](https://origin.picgo.net/2025/09/21/PixPin_2025-07-27_10-12-21e2176109d4be271d2d4b254cc715edfd.gif)
+![](./foresee/img/3e5197d33c8dce60.avif) 
 
-![PixPin 2025 07 27 10 48 17339ea527282addc7](https://origin.picgo.net/2025/09/21/PixPin_2025-07-27_10-48-17339ea527282addc73dc168721c1867b3.gif)
+### Paragraph
+
+![](./foresee/img/8f37a4ddbd92b985.avif) 
 
 ### Badge
 
-![](https://cdn.iglooblog.top/typora/%E6%88%AA%E5%B1%8F2026-01-12%2022.51.07.png)
+#### Gradient
+
+![](./foresee/img/2026-01-1222.51.07.avif) 
+
+#### Glass
+
+![](./foresee/img/2026-01-1222.53.24.avif) 
+
+### Formula
+
+```latex
+17+15=32\\
+32\%3=2\iff\begin{cases}
+17\%3=2\\
+15\%3=0\\
+2+0=2
+\end{cases}
+```
+
+![](./foresee/img/2026-01-1222.51.51.avif) 
 
 ## Todo
 
-- [x] add more animation style
-- [ ] add pdf input style
+- [x] Add more animation style
+- [ ] Re-design the text marking effect of the paragraph
+- [ ] Add pdf input style
 - [x] Distinguish between dark and light reference block styles
 
 ## Personalities
@@ -269,15 +296,15 @@ Visit [wiki](https://github.com/passwordgloo/Typora-foresee-theme/wiki/English-T
 
 ### Gradient style
 
-![PixPin 2025 08 02 11 46 21e6395e3ffef84934](https://origin.picgo.net/2025/09/21/PixPin_2025-08-02_11-46-21e6395e3ffef84934b3807a8d183780bf.png)
+![](./foresee/img/2026-01-13_22-07-57.avif) 
 
 ### Classic Style
 
-![PixPin 2025 08 02 11 45 401e2f70479b054970](https://origin.picgo.net/2025/09/21/PixPin_2025-08-02_11-45-401e2f70479b0549701839ba43e56bad3a.png)
+![](./foresee/img/2026-01-13_22-05-33.avif) 
 
 ### Glass Style
 
-![PixPin 2025 08 02 11 44 48cb6ef2e69994ffc9](https://origin.picgo.net/2025/09/21/PixPin_2025-08-02_11-44-48cb6ef2e69994ffc9e9cb178a773c5545.png)
+![](./foresee/img/2026-01-13_22-06-19.avif) 
 
 ## Purpose of use
 

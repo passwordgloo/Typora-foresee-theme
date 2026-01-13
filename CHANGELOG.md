@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.0.5.7(2025-09-21)
+## 0.0.5.8(2025-09-21)
 
 Readme: Update image link
 

@@ -14,6 +14,10 @@
 
 ## Blockquote
 
+> Blockquote Content
+
+### GFM
+
 > [!note]
 >
 > You can type `>`to insert blockquote by default . 
@@ -126,6 +130,12 @@ We also support GitHub style blockquote
 } 
 ```
 
+## Paragraph
+
+Some minds seem almost to create themselves, springing up under every disadvantage and working their solitary but irresistible way through a thousand obstacles.
+
+有些人仿佛自己创造自己，在逆境中崛起，在无数阻碍中孤独然而却是不可抗拒地开辟自己的道路。
+
 ## Formula
 
 ```latex
@@ -169,8 +179,22 @@ $$
 
 ## Table
 
-| Name | Content | Remark |
-| ---- | ------- | ------ |
-|      |         |        |
-|      |         |        |
-|      |         |        |
+| Function           | Hotkey (Windows/Linux) | Hotkey (macOS)               |
+| ------------------ | ---------------------- | ---------------------------- |
+| Toggle Sidebar     | `Ctrl `+ `Shift` + `L` | `Command ` + `Shift` + `L`   |
+| Outline            | `Ctrl `+ `Shift` + `1` | `Command ` + `Control` + `1` |
+| Articles           | `Ctrl `+ `Shift` + `2` | `Command ` + `Control` + `2` |
+| File Tree          | `Ctrl `+ `Shift` + `3` | `Command ` + `Control` + `3` |
+| Source Code Mode   | `Ctrl `+ `/`           | `Command ` + `/`             |
+| Focus Mode         | `F8`                   | `F8`                         |
+| Typewriter Mode    | `F9`                   | `F9`                         |
+| Toggler Fullscreen | `F11`                  | `Command ` + `Option`+ `F`   |
+| Actual Size        | `Ctrl `+ `Shift` + `O` | (Not Supported)              |
+
+| 视图控制   | 热键（Windows/Linux）           | 热键（macOS)             |
+| ---------- | ------------------------------- | ------------------------ |
+| 切换侧边栏 | <kbd>Ctrl</kbd>+ <kbd>Shift</kbd> + <kbd>L</kbd> | <kbd>⌘ Command</kbd>+ <kbd>Shift</kbd> + <kbd>L</kbd> |
+| 大纲视图   | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> | <kbd>⌘ Command</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> |
+| 源代码模式 | <kbd>Ctrl</kbd>+ <kbd>/</kbd> | <kbd>⌘ Command</kbd> + <kbd>/</kbd> |
+| 专注模式   | <kbd>F11</kbd>                | <kbd>⌘ Command</kbd> + <kbd>Option</kbd> + <kbd>F</kbd> |
+
