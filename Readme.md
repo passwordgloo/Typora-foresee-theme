@@ -59,7 +59,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 <section alt="important-icon">important-icon text</section>
 ```
 
-![](./foresee/img/2026-01-12 22.51.36.avif) 
+![](./foresee/img/2026-01-1222.51.36.avif) 
 
 ### Todo list
 
@@ -67,7 +67,7 @@ Selected textstyle is inspired by [typora-dyzj-theme](https://github.com/muggled
 >
 > Use gradient-style blocks for decoration
 
-![](./foresee/img/2026-01-13 17.54.53.avif) 
+![](./foresee/img/2026-01-1317.54.53.avif) 
 
 ### Code Style
 
@@ -107,7 +107,7 @@ inline code like this
 
 You can type `>` to insert blockquote by default
 
-![](./foresee/img/2026-01-13 18.19.23.avif) 
+![](./foresee/img/2026-01-1318.19.23.avif) 
 
 2. Blockquote style supports linear-gradient
 

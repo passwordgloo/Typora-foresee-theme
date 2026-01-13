@@ -59,14 +59,14 @@
 <section alt="important-icon">important-icon text</section>
 ```
 
-![](./foresee/img/2026-01-12 22.51.36.avif)
+![](./foresee/img/2026-01-1222.51.36.avif)
 
 ### 代办清单
 
 >[!note]
 >使用渐变风格方块修饰
 
-![](./foresee/img/2026-01-13 17.54.53.avif)
+![](./foresee/img/2026-01-1317.54.53.avif)
 
 ### 代码样式
 
@@ -103,7 +103,7 @@ kbd元素样式如下
 
 你可以输入 `>` 去插入默认引用块
 
-![](./foresee/img/2026-01-13 18.19.23.avif)
+![](./foresee/img/2026-01-1318.19.23.avif)
 
 2. 引用块样式支持渐变色
 
