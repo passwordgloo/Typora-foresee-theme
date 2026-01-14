@@ -192,7 +192,7 @@ You can type `>` to insert blockquote by default
 ## Todo
 
 - [x] Add more animation style
-- [ ] Re-design the text marking effect of the paragraph
+- [x] Re-design the text marking effect of the paragraph
 - [ ] Add pdf input style
 - [x] Distinguish between dark and light reference block styles
 

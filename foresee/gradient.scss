@@ -140,7 +140,7 @@ body {
 
   &:active {
     background: $lightFocusColor;
-    transition: all.5s;
+    transition: all 0.5s;
   }
 }
 
@@ -163,7 +163,7 @@ body {
 // Header style
 
 @mixin title-common {
-  margin:0 0 .5rem 0;
+  margin: 0 0 0.5rem 0;
   line-height: 1.4;
   cursor: text;
   font-family: $font-family;
@@ -182,6 +182,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   @include title-common();
+
   &::before {
     content: "";
     width: 0.5rem;
@@ -193,7 +194,7 @@ h2 {
 }
 
 h2:hover::before,
-#write > h2.md-focus::after {
+#write>h2.md-focus::after {
   background: linear-gradient(45deg, $focusGradient);
 }
 
@@ -216,7 +217,7 @@ h3 {
   }
 }
 
-#write > h3.md-focus::after {
+#write>h3.md-focus::after {
   content: "";
   width: 6rem;
   height: 0.3rem;
@@ -233,7 +234,7 @@ h4 {
   @include title-common();
 }
 
-#write > h4.md-focus {
+#write>h4.md-focus {
   border-bottom-color: $lightFocusColor;
   transition: border-bottom-color 0.5s linear;
 }
@@ -250,6 +251,7 @@ h5 {
 }
 
 @keyframes bounce {
+
   0%,
   100%,
   20%,
@@ -267,7 +269,7 @@ h5 {
   }
 }
 
-#write > h5.md-focus:before {
+#write>h5.md-focus:before {
   width: auto;
   height: auto;
   background-color: $lightFocusColor;
@@ -282,17 +284,18 @@ sup.md-footnote {
 p {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  transition: all ease-in-out .8s;
+  transition: all ease-in-out 0.8s;
 }
 
-p.md-focus > span.md-plain.md-expand {
+p.md-focus>span.md-plain.md-expand {
   // border-bottom: 2px dashed $lightFocusColor;
-  background:linear-gradient(to right,$focusGradient) no-repeat right bottom;
+  background: linear-gradient(to right, $focusGradient) no-repeat right bottom;
   background-size: 0 2px;
   transition: all 0.8s ease-in;
-  &:hover{
-      background-size: 100% 2px;
-      transition: background-size 0.8s ease-in;
+
+  &:hover {
+    background-size: 100% 2px;
+    transition: background-size 0.8s ease-in;
   }
 }
 
@@ -311,34 +314,22 @@ a {
   border-radius: $border-radius;
 }
 
-span[alt="black"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $black-gradient);
-}
+// Define gradient map for badge variations
+$badge-gradients: (
+  black: $black-gradient,
+  blue: $blue-gradient,
+  orange: $orange-gradient,
+  purple: $purple-gradient,
+  green: $green-gradient,
+  red: $tomato-gradient
+);
 
-span[alt="blue"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $blue-gradient);
-}
-
-span[alt="orange"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $orange-gradient);
-}
-
-span[alt="purple"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $purple-gradient);
-}
-
-span[alt="green"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $green-gradient);
-}
-
-span[alt="red"] {
-  @include badge-common();
-  background-image: linear-gradient(to right, $tomato-gradient);
+// Generate styles using @each loop
+@each $alt, $gradient in $badge-gradients {
+  span[alt="#{$alt}"] {
+    @include badge-common();
+    background-image: linear-gradient(to right, $gradient);
+  }
 }
 
 p,
@@ -350,8 +341,8 @@ table {
   margin: 0.8em 0;
 }
 
-li > ol,
-li > ul {
+li>ol,
+li>ul {
   margin: 0 0;
 }
 
@@ -417,7 +408,8 @@ li::marker {
 blockquote {
   @include blockquote-common();
   color: $themeColor;
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+  background-image:
+    linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $themeColor 0%, $themeColor 100%);
   color: var(--text-color);
 
@@ -427,10 +419,11 @@ blockquote {
   }
 }
 
-h2 + blockquote,
+h2+blockquote,
 blockquote[alt="green"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+  background-image:
+    linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $green-gradient);
   color: $green;
 
@@ -441,10 +434,11 @@ blockquote[alt="green"] {
   }
 }
 
-h3 + blockquote,
+h3+blockquote,
 blockquote[alt="blue"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+  background-image:
+    linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $blue-gradient);
   color: $blue;
 
@@ -454,10 +448,11 @@ blockquote[alt="blue"] {
   }
 }
 
-h4 + blockquote,
+h4+blockquote,
 blockquote[alt="orange"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+  background-image:
+    linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $orange-gradient);
   color: $orange;
 
@@ -467,10 +462,11 @@ blockquote[alt="orange"] {
   }
 }
 
-h5 + blockquote,
+h5+blockquote,
 blockquote[alt="purple"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+  background-image:
+    linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $purple-gradient);
   color: $purple;
 
@@ -482,7 +478,8 @@ blockquote[alt="purple"] {
 
 blockquote[alt="red"] {
   @include blockquote-common();
-  background-image: linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
+  background-image:
+    linear-gradient(to right, var(--rawblock-edit-panel-bd), var(--rawblock-edit-panel-bd)),
     linear-gradient(0deg, $tomato-gradient);
   color: $red;
 
@@ -530,108 +527,57 @@ blockquote[alt="red"] {
   color: white;
 }
 
-.md-alert.md-alert-note {
-  @include bar();
-  background: linear-gradient(to right, $black-gradient);
-}
+// Define gradient mappings
+$alert-gradients: (
+  note: $black-gradient,
+  caution: $tomato-gradient,
+  tip: $green-gradient,
+  important: $purple-gradient,
+  warning: $orange-gradient
+);
 
-.md-alert.md-alert-caution {
-  @include bar();
-  background: linear-gradient(to right, $tomato-gradient);
-}
+$section-gradients: (
+  note: $black-gradient,
+  info: $blue-gradient,
+  tip: $green-gradient,
+  warning: $orange-gradient,
+  caution: $tomato-gradient,
+  important: $purple-gradient
+);
 
-.md-alert.md-alert-tip {
-  @include bar();
-  background: linear-gradient(to right, $green-gradient);
-}
+$icon-mappings: (
+  note: "./foresee/icon/info.svg",
+  info: "./foresee/icon/correct.svg",
+  tip: "./foresee/icon/question.svg",
+  warning: "./foresee/icon/alert.svg",
+  caution: "./foresee/icon/caution.svg",
+  important: "./foresee/icon/alert.svg"
+);
 
-.md-alert.md-alert-important {
-  @include bar();
-  background: linear-gradient(to right, $purple-gradient);
-}
-
-.md-alert.md-alert-warning {
-  @include bar();
-  background: linear-gradient(to right, $orange-gradient);
-}
-
-
-section[alt="note"],section[alt="note-icon"]{
-  @extend %bar;
-  background: linear-gradient(to right, $black-gradient);
-}
-
-section[alt="info"],section[alt="info-icon"]{
-  @extend %bar;
-  background: linear-gradient(to right, $blue-gradient);
-}
-
-section[alt="tip"],section[alt="tip-icon"]{
-  @extend %bar;
-  background: linear-gradient(to right, $green-gradient);
-}
-
-section[alt="warning"],section[alt="warning-icon"]{
-  @extend %bar;
-  background: linear-gradient(to right, $orange-gradient);
-}
-
-section[alt="caution"],section[alt="caution-icon"]{
-  @extend %bar;
-  background: linear-gradient(to right, $tomato-gradient);
-}
-
-section[alt="important"],section[alt="important-icon"]{
-  @extend %bar;
-  background: linear-gradient(to right, $purple-gradient);
-}
-
-section[alt="note-icon"] {
-  &::before {
-    content: url("./foresee/icon/info.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $black-gradient);
+// Generate .md-alert styles
+@each $type, $gradient in $alert-gradients {
+  .md-alert.md-alert-#{$type} {
+    @include bar();
+    background: linear-gradient(to right, $gradient);
   }
 }
 
-section[alt="info-icon"] {
-  &::before {
-    content: url("./foresee/icon/correct.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $blue-gradient);
-  }
-}
+// Generate section styles
+@each $type, $gradient in $section-gradients {
 
-section[alt="tip-icon"] {
-  &::before {
-    content: url("./foresee/icon/question.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $green-gradient);
+  section[alt="#{$type}"],
+  section[alt="#{$type}-icon"] {
+    @extend %bar;
+    background: linear-gradient(to right, $gradient);
   }
-}
 
-section[alt="warning-icon"] {
-  &::before {
-    content: url("./foresee/icon/alert.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $orange-gradient);
-  }
+  // Generate icon section ::before styles
+  section[alt="#{$type}-icon"]::before {
+    content: url(#{map-get($icon-mappings, $type)
+  });
+  @extend %bar_icon;
+  background: linear-gradient(to right, $gradient);
 }
-
-section[alt="caution-icon"] {
-  &::before {
-    content: url("./foresee/icon/caution.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $tomato-gradient);
-  }
-}
-
-section[alt="important-icon"] {
-  &::before {
-    content: url("./foresee/icon/alert.svg");
-    @extend %bar_icon;
-    background: linear-gradient(to right, $purple-gradient);
-  }
 }
 
 table {
@@ -669,8 +615,37 @@ table th {
 }
 
 mark {
-  background-color: $lightFocusColor;
+  background: linear-gradient(to bottom,
+      transparent 50%,
+      lighten($themeColor, 15%) 50%,
+      lighten($themeColor, 15%) 100%);
   color: var(--rawblock-edit-panel-bd);
+}
+
+// Define color map for mark variations
+$mark-colors: (
+  warning: ($orange,
+    15%),
+  tip: ($green,
+    35%),
+  info: ($blue,
+    35%),
+  caution: ($red,
+    15%),
+  important: ($purple,
+    35%)
+);
+
+@each $class, $color-data in $mark-colors {
+  $color: nth($color-data, 1);
+  $lighten: nth($color-data, 2);
+
+  mark.#{$class} {
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        lighten($color, $lighten) 50%,
+        lighten($color, $lighten) 100%);
+  }
 }
 
 // Editor
@@ -737,8 +712,10 @@ pre.md-fences {
   color: var(--text-color);
 }
 
-// Todo list
 
+
+
+// Todo list
 .task-list {
   padding-left: 0;
 }
@@ -753,6 +730,7 @@ pre.md-fences {
     height: 100%;
     border: 1px solid $themeColor;
   }
+
   &:checked:before,
   [checked]:before {
     background: linear-gradient($themeGradient);
@@ -812,7 +790,7 @@ pre.md-fences {
 }
 
 .on-focus-mode .md-end-block:not(.md-focus) img,
-.on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
   opacity: #686868 !important;
 }
 
@@ -820,7 +798,7 @@ pre.md-fences {
   color: #686868;
 }
 
-.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
 .on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
   color: #686868 !important;
 }
@@ -830,7 +808,7 @@ pre.md-fences {
   color: #fff;
 }
 
-.on-focus-mode #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
   color: #686868 !important;
 }
 
@@ -871,7 +849,7 @@ pre.md-fences {
   background-color: map-get($article, light);
 }
 
-#megamenu-menu-list > li > a {
+#megamenu-menu-list>li>a {
   border: none;
   color: var(--text-color);
 }
@@ -888,7 +866,7 @@ pre.md-fences {
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.open>.dropdown-toggle.btn-default {
   color: white;
   border: 1px solid #ddd;
   background-color: inherit;
@@ -983,12 +961,12 @@ pre.md-fences {
   height: 32px;
 }
 
-.file-library-node.active > .file-node-content,
+.file-library-node.active>.file-node-content,
 .file-list-item.active {
   color: $focusColor;
 }
 
-.file-library-node.active > .file-node-background {
+.file-library-node.active>.file-node-background {
   background-color: var(--bg-color);
   border-color: $themeColor;
 }
@@ -1060,10 +1038,10 @@ footer.ty-footer {
 
 .cm-s-inner .CodeMirror-line::selection,
 .cm-s-inner .CodeMirror-line::-moz-selection,
-.cm-s-inner .CodeMirror-line > span::selection,
-.cm-s-inner .CodeMirror-line > span::-moz-selection,
-.cm-s-inner .CodeMirror-line > span > span::selection,
-.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1153,6 +1131,7 @@ footer.ty-footer {
 // Print config
 
 @media print {
+
   table,
   pre {
     page-break-inside: avoid;
@@ -1216,10 +1195,10 @@ footer.ty-footer {
 
   .cm-s-inner .CodeMirror-line::selection,
   .cm-s-inner .CodeMirror-line::-moz-selection,
-  .cm-s-inner .CodeMirror-line > span::selection,
-  .cm-s-inner .CodeMirror-line > span::-moz-selection,
-  .cm-s-inner .CodeMirror-line > span > span::selection,
-  .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+  .cm-s-inner .CodeMirror-line>span::selection,
+  .cm-s-inner .CodeMirror-line>span::-moz-selection,
+  .cm-s-inner .CodeMirror-line>span>span::selection,
+  .cm-s-inner .CodeMirror-line>span>span::-moz-selection {
     background: rgba(255, 255, 255, 0.1);
   }
 
@@ -1232,11 +1211,22 @@ footer.ty-footer {
   $code-string-dark: #a8ff60;
   $code-number-dark: #cd3f45;
 
-  .cm-s-inner .CodeMirror-linenumber { color: $code-linenumber-dark; }
-  .cm-s-inner span.cm-comment { color: $code-comment-dark; }
-  .cm-s-inner span.cm-string, .cm-s-inner span.cm-string-2 { color: $code-string-dark; }
-  .cm-s-inner span.cm-number { color: $code-number-dark; }
+  .cm-s-inner .CodeMirror-linenumber {
+    color: $code-linenumber-dark;
+  }
 
+  .cm-s-inner span.cm-comment {
+    color: $code-comment-dark;
+  }
+
+  .cm-s-inner span.cm-string,
+  .cm-s-inner span.cm-string-2 {
+    color: $code-string-dark;
+  }
+
+  .cm-s-inner span.cm-number {
+    color: $code-number-dark;
+  }
 
   $code-variable-dark: #55b5db;
   $code-variable-2-dark: #a074c4;
@@ -1244,11 +1234,25 @@ footer.ty-footer {
   $code-keyword-dark: #ff79c6;
   $code-operator-dark: #9fca56;
 
-  .cm-s-inner span.cm-variable { color: $code-variable-dark; }
-  .cm-s-inner span.cm-variable-2 { color: $code-variable-2-dark; }
-  .cm-s-inner span.cm-def { color: $code-def-dark; }
-  .cm-s-inner span.cm-keyword { color: $code-keyword-dark; }
-  .cm-s-inner span.cm-operator { color: $code-operator-dark; }
+  .cm-s-inner span.cm-variable {
+    color: $code-variable-dark;
+  }
+
+  .cm-s-inner span.cm-variable-2 {
+    color: $code-variable-2-dark;
+  }
+
+  .cm-s-inner span.cm-def {
+    color: $code-def-dark;
+  }
+
+  .cm-s-inner span.cm-keyword {
+    color: $code-keyword-dark;
+  }
+
+  .cm-s-inner span.cm-operator {
+    color: $code-operator-dark;
+  }
 
   $code-atom-dark: #cd3f45;
   $code-meta-dark: #55b5db;
@@ -1259,14 +1263,38 @@ footer.ty-footer {
   $code-type-dark: #9fca56;
   $code-builtin-dark: #9fca56;
 
-  .cm-s-inner span.cm-atom { color: $code-atom-dark; }
-  .cm-s-inner span.cm-meta { color: $code-meta-dark; }
-  .cm-s-inner span.cm-tag { color: $code-tag-dark; }
-  .cm-s-inner span.cm-attribute { color: $code-attribute-dark; }
-  .cm-s-inner span.cm-qualifier { color: $code-qualifier-dark; }
-  .cm-s-inner span.cm-property { color: $code-property-dark; }
-  .cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: $code-type-dark; }
-  .cm-s-inner span.cm-builtin { color: $code-builtin-dark; }
+  .cm-s-inner span.cm-atom {
+    color: $code-atom-dark;
+  }
+
+  .cm-s-inner span.cm-meta {
+    color: $code-meta-dark;
+  }
+
+  .cm-s-inner span.cm-tag {
+    color: $code-tag-dark;
+  }
+
+  .cm-s-inner span.cm-attribute {
+    color: $code-attribute-dark;
+  }
+
+  .cm-s-inner span.cm-qualifier {
+    color: $code-qualifier-dark;
+  }
+
+  .cm-s-inner span.cm-property {
+    color: $code-property-dark;
+  }
+
+  .cm-s-inner span.cm-variable-3,
+  .cm-s-inner span.cm-type {
+    color: $code-type-dark;
+  }
+
+  .cm-s-inner span.cm-builtin {
+    color: $code-builtin-dark;
+  }
 
   .cm-s-inner .CodeMirror-activeline-background {
     background: rgba(255, 255, 255, 0.1);
