@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.9
+version:0.0.6.0
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -167,69 +167,69 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-    cursor: text;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  cursor: text;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 2000;
-    line-height: 1.2;
-    text-align: center;
-    font-family: $font-family;
+  font-size: 2rem;
+  font-weight: 2000;
+  line-height: 1.2;
+  text-align: center;
+  font-family: $font-family;
 }
 
 h2 {
-    font-size: 1.8rem;
-    font-weight: 1000;
-    line-height: 1.2;
-    padding-left: .5em;
-    font-family: $font-family;
-    border-left: 6px solid $themeColor;
-    border-radius: 4px;
+  font-size: 1.8rem;
+  font-weight: 1000;
+  line-height: 1.2;
+  padding-left: .5em;
+  font-family: $font-family;
+  border-left: 6px solid $themeColor;
+  border-radius: 4px;
 }
 
 #write>h2.md-focus {
-    border-left-color: $focusColor;
+  border-left-color: $focusColor;
 }
 
 h3 {
-    font-size: 1.6em;
-    font-weight: 500;
-    line-height: 1.43;
-    font-family: $font-family;
-    border-bottom: 1px dashed $themeColor;
+  font-size: 1.6em;
+  font-weight: 500;
+  line-height: 1.43;
+  font-family: $font-family;
+  border-bottom: 1px dashed $themeColor;
 }
 
 #write>h3.md-focus {
-    border-color: var(--focus-color);
+  border-color: var(--focus-color);
 }
 
 h4 {
-    color: $themeColor;
-    font-weight: 300;
-    font-size: 1.4em;
-    font-family: $font-family;
+  color: $themeColor;
+  font-weight: 300;
+  font-size: 1.4em;
+  font-family: $font-family;
 }
 
 h5 {
-    font-size: 1.2em;
-    font-family: $font-family;
-    font-weight: 900;
+  font-size: 1.2em;
+  font-family: $font-family;
+  font-weight: 900;
 }
 
 #write>h5.md-focus:before {
-    width: auto;
-    height: auto;
-    background-color: var(--focus-color);
-    color: #ffffff;
+  width: auto;
+  height: auto;
+  background-color: var(--focus-color);
+  color: #ffffff;
 }
 
 sup.md-footnote {
-    background-color: var(--sidebar);
-    color: $themeColor;
+  background-color: var(--sidebar);
+  color: $themeColor;
 }
 
 p {
@@ -265,25 +265,26 @@ $badge-colors: (
 }
 
 blockquote {
-    padding: 12px 0 8px 10px;
-    background-color: map-get($sidebar, $key: light);
-    line-height: inherit;
-    min-height: 20px;
-    margin: 1em 0;
-    border-left: 4px solid $themeColor;
-    text-indent: 0em;
-    color: $themeColor;
-    overflow: hidden;
+  padding: 12px 0 8px 10px;
+  background-color: map-get($sidebar, $key: light);
+  line-height: inherit;
+  min-height: 20px;
+  margin: 1em 0;
+  border-left: 4px solid $themeColor;
+  text-indent: 0em;
+  color: $themeColor;
+  overflow: hidden;
 }
 
-h2+blockquote,blockquote[alt="green"] {
-    color: $green;
-    border-left-color: $green;
+h2+blockquote,
+blockquote[alt="green"] {
+  color: $green;
+  border-left-color: $green;
 }
 
 /* change svg color */
 
-@mixin blockquote-img($color){
+@mixin blockquote-img($color) {
   position: relative;
   transform: translateX(-80px);
   height: 1rem;
@@ -299,27 +300,27 @@ h2+blockquote img {
   @include blockquote-img(green)
 }
 
-h3+blockquote,blockquote[alt="blue"] {
-    color: $blue;
-    border-left-color: $blue;
+h3+blockquote, blockquote[alt="blue"] {
+  color: $blue;
+  border-left-color: $blue;
 }
 
 h3+blockquote img {
   @include blockquote-img(blue)
 }
 
-h4+blockquote,blockquote[alt="orange"]{
-    border-left-color: $orange;
-    color: $orange;
+h4+blockquote, blockquote[alt="orange"] {
+  border-left-color: $orange;
+  color: $orange;
 }
 
 h4+blockquote img {
   @include blockquote-img(orange)
 }
 
-blockquote[alt="purple"]{
-    border-left-color: $purple;
-    color: $purple;
+blockquote[alt="purple"] {
+  border-left-color: $purple;
+  color: $purple;
 }
 
 @mixin bar {
@@ -332,31 +333,31 @@ blockquote[alt="purple"]{
 .md-alert.md-alert-note {
   @include bar();
   color: map-get($article, dark);
-  border:2px map-get($article, dark) solid;
+  border: 2px map-get($article, dark) solid;
 }
 
 .md-alert.md-alert-caution {
   @include bar();
-  color:$tomato;
-  border:2px solid $tomato;
+  color: $tomato;
+  border: 2px solid $tomato;
 }
 
 .md-alert.md-alert-tip {
   @include bar();
-  color:$green;
-  border:2px solid $green;
+  color: $green;
+  border: 2px solid $green;
 }
 
 .md-alert.md-alert-important {
   @include bar();
-  color:$purple;
-  border:2px solid $purple;
+  color: $purple;
+  border: 2px solid $purple;
 }
 
 .md-alert.md-alert-warning {
   @include bar();
-  color:$orange;
-  border:2px solid $orange;
+  color: $orange;
+  border: 2px solid $orange;
 }
 
 p,
@@ -368,8 +369,8 @@ table {
   margin: 0.8em 0;
 }
 
-li > ol,
-li > ul {
+li>ol,
+li>ul {
   margin: 0 0;
 }
 
@@ -436,35 +437,24 @@ table th {
 }
 
 mark {
-  background: linear-gradient(to bottom,
-      transparent 50%,
-      lighten($themeColor, 15%) 50%,
-      lighten($themeColor, 15%) 100%);
-  // color: var(--rawblock-edit-panel-bd);
+  background: linear-gradient(to bottom, transparent 60%, lighten($themeColor, 15%) 60%, lighten($themeColor, 15%) 100%);
+  color: map-get($textColor, dark);
 }
 
 $mark-colors: (
-  warning: ($orange,
-    15%),
-  tip: ($green,
-    35%),
-  info: ($blue,
-    35%),
-  caution: ($red,
-    15%),
-  important: ($purple,
-    35%)
+  warning: ($orange, 30%),
+  tip: ($green, 35%),
+  info: ($blue, 35%),
+  caution: ($red, 20%),
+  important: ($purple, 35%)
 );
 
 @each $class, $color-data in $mark-colors {
   $color: nth($color-data, 1);
   $lighten: nth($color-data, 2);
 
-  mark.#{$class} {
-    background: linear-gradient(to bottom,
-        transparent 50%,
-        lighten($color, $lighten) 50%,
-        lighten($color, $lighten) 100%);
+  mark[alt="#{$class}"] {
+    background: linear-gradient(to bottom, transparent 55%, lighten($color, $lighten) 55%, lighten($color, $lighten) 100%);
   }
 }
 
@@ -548,6 +538,7 @@ pre.md-fences {
     height: 100%;
     border: 1px solid $themeColor;
   }
+
   &:checked:before,
   [checked]:before {
     background: linear-gradient($themeGradient);
@@ -607,7 +598,7 @@ pre.md-fences {
 }
 
 .on-focus-mode .md-end-block:not(.md-focus) img,
-.on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
   opacity: #686868 !important;
 }
 
@@ -615,7 +606,7 @@ pre.md-fences {
   color: #686868;
 }
 
-.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
 .on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
   color: #686868 !important;
 }
@@ -625,7 +616,7 @@ pre.md-fences {
   color: #fff;
 }
 
-.on-focus-mode #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
   color: #686868 !important;
 }
 
@@ -666,7 +657,7 @@ pre.md-fences {
   background-color: map-get($article, light);
 }
 
-#megamenu-menu-list > li > a {
+#megamenu-menu-list>li>a {
   border: none;
   color: var(--text-color);
 }
@@ -683,7 +674,7 @@ pre.md-fences {
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.open>.dropdown-toggle.btn-default {
   color: white;
   border: 1px solid #ddd;
   background-color: inherit;
@@ -778,12 +769,12 @@ pre.md-fences {
   height: 32px;
 }
 
-.file-library-node.active > .file-node-content,
+.file-library-node.active>.file-node-content,
 .file-list-item.active {
   color: $focusColor;
 }
 
-.file-library-node.active > .file-node-background {
+.file-library-node.active>.file-node-background {
   background-color: var(--bg-color);
   border-color: $themeColor;
 }
@@ -855,10 +846,10 @@ footer.ty-footer {
 
 .cm-s-inner .CodeMirror-line::selection,
 .cm-s-inner .CodeMirror-line::-moz-selection,
-.cm-s-inner .CodeMirror-line > span::selection,
-.cm-s-inner .CodeMirror-line > span::-moz-selection,
-.cm-s-inner .CodeMirror-line > span > span::selection,
-.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -948,6 +939,7 @@ footer.ty-footer {
 // Print config
 
 @media print {
+
   table,
   pre {
     page-break-inside: avoid;
@@ -980,113 +972,184 @@ footer.ty-footer {
   }
 
   blockquote {
-      padding: 12px 0 8px 10px;
-      background-color: map-get($sidebar, $key: dark);
-      line-height: inherit;
-      min-height: 20px;
-      margin: 1em 0;
-      border-left: 4px solid $themeColor;
-      text-indent: 0em;
-      color: $themeColor;
-      overflow: hidden;
+    padding: 12px 0 8px 10px;
+    background-color: map-get($sidebar, $key: dark);
+    line-height: inherit;
+    min-height: 20px;
+    margin: 1em 0;
+    border-left: 4px solid $themeColor;
+    text-indent: 0em;
+    color: $themeColor;
+    overflow: hidden;
   }
 
   .md-alert.md-alert-note {
-  @include bar();
-  color: map-get($article, light);
-  border:2px map-get($article, light) double;
-}
+    @include bar();
+    color: map-get($article, light);
+    border: 2px map-get($article, light) double;
+  }
 
   #top-titlebar,
   #top-titlebar * {
     color: map-get($display, dark);
   }
 
-  code,
-  kbd {
-    padding: 0.3rem;
-    margin-right: 0.4em;
-    color: map-get($textColor, dark);
-    border-radius: $border-radius;
-    background-color: map-get($article, light);
+  $mark-colors: (
+    warning: ($orange, 10%),
+    tip: ($green, 10%),
+    info: ($blue, 15%),
+    caution: ($red, 10%),
+    important: ($purple, 10%)
+  );
+
+mark {
+  color: map-get($textColor, light);
+}
+
+@each $class, $color-data in $mark-colors {
+  $color: nth($color-data, 1);
+  $darken: nth($color-data, 2);
+
+  mark[alt="#{$class}"] {
+    background: linear-gradient(to bottom, transparent 55%, darken($color, $darken) 55%, darken($color, $darken) 100%);
   }
+}
 
-  /*  Code_style(dark mode) */
+code,
+kbd {
+  padding: 0.3rem;
+  margin-right: 0.4em;
+  color: map-get($textColor, dark);
+  border-radius: $border-radius;
+  background-color: map-get($article, light);
+}
 
-  .cm-s-inner.CodeMirror {
-    background-color: map-get($sidebar, dark) !important;
-    border: none;
-  }
+/*  Code_style(dark mode) */
 
-  .cm-s-inner .CodeMirror-gutters {
-    color: #404b53;
-    border: none;
-  }
+.cm-s-inner.CodeMirror {
+  background-color: map-get($sidebar, dark) !important;
+  border: none;
+}
 
-  .CodeMirror div.CodeMirror-cursor {
-    border-left: solid 2px $themeColor;
-  }
+.cm-s-inner .CodeMirror-gutters {
+  color: #404b53;
+  border: none;
+}
 
-  .cm-s-inner .CodeMirror-line::selection,
-  .cm-s-inner .CodeMirror-line::-moz-selection,
-  .cm-s-inner .CodeMirror-line > span::selection,
-  .cm-s-inner .CodeMirror-line > span::-moz-selection,
-  .cm-s-inner .CodeMirror-line > span > span::selection,
-  .cm-s-inner .CodeMirror-line > span > span::-moz-selection {
-    background: rgba(255, 255, 255, 0.1);
-  }
+.CodeMirror div.CodeMirror-cursor {
+  border-left: solid 2px $themeColor;
+}
 
-  .cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
-    background: rgba(255, 255, 255, 0.1);
-  }
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(255, 255, 255, 0.1);
+}
 
-  $code-linenumber-dark: #6d8a88;
-  $code-comment-dark: #7c7c7c;
-  $code-string-dark: #a8ff60;
-  $code-number-dark: #cd3f45;
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.1);
+}
 
-  .cm-s-inner .CodeMirror-linenumber { color: $code-linenumber-dark; }
-  .cm-s-inner span.cm-comment { color: $code-comment-dark; }
-  .cm-s-inner span.cm-string, .cm-s-inner span.cm-string-2 { color: $code-string-dark; }
-  .cm-s-inner span.cm-number { color: $code-number-dark; }
+$code-linenumber-dark: #6d8a88;
+$code-comment-dark: #7c7c7c;
+$code-string-dark: #a8ff60;
+$code-number-dark: #cd3f45;
+
+.cm-s-inner .CodeMirror-linenumber {
+  color: $code-linenumber-dark;
+}
+
+.cm-s-inner span.cm-comment {
+  color: $code-comment-dark;
+}
+
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+  color: $code-string-dark;
+}
+
+.cm-s-inner span.cm-number {
+  color: $code-number-dark;
+}
 
 
-  $code-variable-dark: #55b5db;
-  $code-variable-2-dark: #a074c4;
-  $code-def-dark: #55b5db;
-  $code-keyword-dark: #ff79c6;
-  $code-operator-dark: #9fca56;
+$code-variable-dark: #55b5db;
+$code-variable-2-dark: #a074c4;
+$code-def-dark: #55b5db;
+$code-keyword-dark: #ff79c6;
+$code-operator-dark: #9fca56;
 
-  .cm-s-inner span.cm-variable { color: $code-variable-dark; }
-  .cm-s-inner span.cm-variable-2 { color: $code-variable-2-dark; }
-  .cm-s-inner span.cm-def { color: $code-def-dark; }
-  .cm-s-inner span.cm-keyword { color: $code-keyword-dark; }
-  .cm-s-inner span.cm-operator { color: $code-operator-dark; }
+.cm-s-inner span.cm-variable {
+  color: $code-variable-dark;
+}
 
-  $code-atom-dark: #cd3f45;
-  $code-meta-dark: #55b5db;
-  $code-tag-dark: #018df3;
-  $code-attribute-dark: #e91ad8;
-  $code-qualifier-dark: #9fca56;
-  $code-property-dark: #a074c4;
-  $code-type-dark: #9fca56;
-  $code-builtin-dark: #9fca56;
+.cm-s-inner span.cm-variable-2 {
+  color: $code-variable-2-dark;
+}
 
-  .cm-s-inner span.cm-atom { color: $code-atom-dark; }
-  .cm-s-inner span.cm-meta { color: $code-meta-dark; }
-  .cm-s-inner span.cm-tag { color: $code-tag-dark; }
-  .cm-s-inner span.cm-attribute { color: $code-attribute-dark; }
-  .cm-s-inner span.cm-qualifier { color: $code-qualifier-dark; }
-  .cm-s-inner span.cm-property { color: $code-property-dark; }
-  .cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: $code-type-dark; }
-  .cm-s-inner span.cm-builtin { color: $code-builtin-dark; }
+.cm-s-inner span.cm-def {
+  color: $code-def-dark;
+}
 
-  .cm-s-inner .CodeMirror-activeline-background {
-    background: rgba(255, 255, 255, 0.1);
-  }
+.cm-s-inner span.cm-keyword {
+  color: $code-keyword-dark;
+}
 
-  .cm-s-inner .CodeMirror-matchingbracket {
-    text-decoration: underline;
-    color: white !important;
-  }
+.cm-s-inner span.cm-operator {
+  color: $code-operator-dark;
+}
+
+$code-atom-dark: #cd3f45;
+$code-meta-dark: #55b5db;
+$code-tag-dark: #018df3;
+$code-attribute-dark: #e91ad8;
+$code-qualifier-dark: #9fca56;
+$code-property-dark: #a074c4;
+$code-type-dark: #9fca56;
+$code-builtin-dark: #9fca56;
+
+.cm-s-inner span.cm-atom {
+  color: $code-atom-dark;
+}
+
+.cm-s-inner span.cm-meta {
+  color: $code-meta-dark;
+}
+
+.cm-s-inner span.cm-tag {
+  color: $code-tag-dark;
+}
+
+.cm-s-inner span.cm-attribute {
+  color: $code-attribute-dark;
+}
+
+.cm-s-inner span.cm-qualifier {
+  color: $code-qualifier-dark;
+}
+
+.cm-s-inner span.cm-property {
+  color: $code-property-dark;
+}
+
+.cm-s-inner span.cm-variable-3,
+.cm-s-inner span.cm-type {
+  color: $code-type-dark;
+}
+
+.cm-s-inner span.cm-builtin {
+  color: $code-builtin-dark;
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
 }

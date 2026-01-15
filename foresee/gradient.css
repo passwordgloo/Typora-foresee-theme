@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.9
+version:0.0.6.0
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -656,27 +656,28 @@ table th {
 }
 
 mark {
-  background: linear-gradient(to bottom, transparent 50%, #ffaf4d 50%, #ffaf4d 100%);
+  background: linear-gradient(to bottom, transparent 60%, #ffaf4d 60%, #ffaf4d 100%);
+  color: #323232;
 }
 
-mark.warning {
-  background: linear-gradient(to bottom, transparent 50%, #ffaf4d 50%, #ffaf4d 100%);
+mark[alt="warning"] {
+  background: linear-gradient(to bottom, transparent 55%, #ffd199 55%, #ffd199 100%);
 }
 
-mark.tip {
-  background: linear-gradient(to bottom, transparent 50%, #81ffbf 50%, #81ffbf 100%);
+mark[alt="tip"] {
+  background: linear-gradient(to bottom, transparent 55%, #81ffbf 55%, #81ffbf 100%);
 }
 
-mark.info {
-  background: linear-gradient(to bottom, transparent 50%, #b3ecff 50%, #b3ecff 100%);
+mark[alt="info"] {
+  background: linear-gradient(to bottom, transparent 55%, #b3ecff 55%, #b3ecff 100%);
 }
 
-mark.caution {
-  background: linear-gradient(to bottom, transparent 50%, #f68da3 50%, #f68da3 100%);
+mark[alt="caution"] {
+  background: linear-gradient(to bottom, transparent 55%, #f8a5b6 55%, #f8a5b6 100%);
 }
 
-mark.important {
-  background: linear-gradient(to bottom, transparent 50%, #ffb3ff 50%, #ffb3ff 100%);
+mark[alt="important"] {
+  background: linear-gradient(to bottom, transparent 55%, #ffb3ff 55%, #ffb3ff 100%);
 }
 
 ::-moz-selection {
@@ -1163,6 +1164,65 @@ footer.ty-footer {
   #top-titlebar,
   #top-titlebar * {
     color: #666;
+  }
+  mark {
+    color: #dedede;
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+  }
+  mark:hover {
+    background-size: 200% 100%;
+    background-position: -100% 0;
+  }
+  mark[alt="warning"] {
+    background: linear-gradient(to right, transparent 0%, #cc7000 50%, #cc7000 100%);
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+  }
+  mark[alt="warning"]:hover {
+    background: linear-gradient(to right, transparent 0%, #cc7000 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+  }
+  mark[alt="tip"] {
+    background: linear-gradient(to right, transparent 0%, #009a4d 50%, #009a4d 100%);
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+  }
+  mark[alt="tip"]:hover {
+    background: linear-gradient(to right, transparent 0%, #009a4d 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+  }
+  mark[alt="info"] {
+    background: linear-gradient(to right, transparent 0%, #0086b3 50%, #0086b3 100%);
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+  }
+  mark[alt="info"]:hover {
+    background: linear-gradient(to right, transparent 0%, #0086b3 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+  }
+  mark[alt="caution"] {
+    background: linear-gradient(to right, transparent 0%, #ed1743 50%, #ed1743 100%);
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+  }
+  mark[alt="caution"]:hover {
+    background: linear-gradient(to right, transparent 0%, #ed1743 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+  }
+  mark[alt="important"] {
+    background: linear-gradient(to right, transparent 0%, #cc00cc 50%, #cc00cc 100%);
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+  }
+  mark[alt="important"]:hover {
+    background: linear-gradient(to right, transparent 0%, #cc00cc 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
   }
   code,
   kbd {

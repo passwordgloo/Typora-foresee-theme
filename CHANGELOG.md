@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.0.6.0(2026-01-15)
+
+Feat: add mark style
+
+## 0.0.5.9(2026-01-15)
+
+Readme：Update image link
+
 ## 0.0.5.8(2025-09-21)
 
 Readme: Update image link

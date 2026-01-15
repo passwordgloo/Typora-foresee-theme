@@ -132,9 +132,19 @@ We also support GitHub style blockquote
 
 ## Paragraph
 
-Some minds seem almost to create themselves, springing up under every disadvantage and working their solitary ==but irresistible way through a thousand obstacles==.
+Some minds seem almost to create themselves, springing up under every disadvantage and working their solitary but irresistible way through a thousand obstacles.
 
-有些人仿佛自己创造自己，在逆境中崛起，在无数阻碍中孤独然而却是不可抗拒地==开辟自己的道路==。
+有些人仿佛自己创造自己，在逆境中崛起，在无数阻碍中孤独然而却是不可抗拒地开辟自己的道路。
+
+==Love== is the one thing that transcends time and space.
+
+My <mark alt="info">journey</mark> is the stars and the sea.
+
+Let life be beautiful like <mark alt="important">summer flowers </mark>and death like autumn leaves.
+
+Go all out for everything, including <mark alt="caution">happiness</mark>.
+
+Time and space shuttle, you are my most beautiful <mark alt="warning"> back</mark>, the best of us will meet tomorrow. Rather than doing nothing, <mark alt="tip">it is better to make waves</mark>.
 
 ## Formula
 
