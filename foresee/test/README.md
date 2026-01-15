@@ -132,7 +132,7 @@ We also support GitHub style blockquote
 
 ## Paragraph
 
-Some minds seem almost to create themselves, springing up under every disadvantage and working their solitary but irresistible way through a thousand obstacles.
+Some minds seem almost to create themselves, springing up under every disadvantage and working their solitary ==but irresistible way through a thousand obstacles==.
 
 有些人仿佛自己创造自己，在逆境中崛起，在无数阻碍中孤独然而却是不可抗拒地==开辟自己的道路==。
 

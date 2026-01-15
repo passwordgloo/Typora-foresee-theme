@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.8
+version:0.0.5.9
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -619,10 +619,9 @@ mark {
       transparent 50%,
       lighten($themeColor, 15%) 50%,
       lighten($themeColor, 15%) 100%);
-  color: var(--rawblock-edit-panel-bd);
+  // color: var(--rawblock-edit-panel-bd);
 }
 
-// Define color map for mark variations
 $mark-colors: (
   warning: ($orange,
     15%),

@@ -1,5 +1,5 @@
 /* 
-version:0.0.5.8
+version:0.0.5.9
 author:passwordgloo
 mode:auto switch light and dark mode
 repo:https://github.com/passwordgloo/Typora-foresee-theme
@@ -483,8 +483,36 @@ table th {
 }
 
 mark {
-  background-color: $lightFocusColor;
-  color: var(--rawblock-edit-panel-bd);
+  background: linear-gradient(to bottom,
+      transparent 50%,
+      lighten($themeColor, 15%) 50%,
+      lighten($themeColor, 15%) 100%);
+  // color: var(--rawblock-edit-panel-bd);
+}
+
+$mark-colors: (
+  warning: ($orange,
+    15%),
+  tip: ($green,
+    35%),
+  info: ($blue,
+    35%),
+  caution: ($red,
+    15%),
+  important: ($purple,
+    35%)
+);
+
+@each $class, $color-data in $mark-colors {
+  $color: nth($color-data, 1);
+  $lighten: nth($color-data, 2);
+
+  mark.#{$class} {
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        lighten($color, $lighten) 50%,
+        lighten($color, $lighten) 100%);
+  }
 }
 
 // Editor
